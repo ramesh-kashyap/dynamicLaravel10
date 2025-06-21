@@ -42,6 +42,8 @@
     <link rel="stylesheet" href="assets/templates/basic/css/custom.css">
     <link rel="stylesheet" href="assets/templates/basic/css/color.php?color1=2A9ED0">
 
+
+    
             <style>
         .currency-loading {
             height: 400px;
