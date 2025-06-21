@@ -10,22 +10,22 @@
     <meta name="title" Content="TMC P2P Exchange - Home">
     <meta name="description" content="TMC P2P Exchange is a p2p crypto exchange marketplace where people can trade crypto directly with each other.">
     <meta name="keywords" content="crypto,cryptocurrency,cryptocurrencies,exchange,cryptoexchange,bitcoin,etherium">
-    <link rel="shortcut icon" href="http://localhost/p2pexchange/p2pexchange/assets/images/logoIcon/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/logoIcon/favicon.png" type="image/x-icon">
 
     
-    <link rel="apple-touch-icon" href="http://localhost/p2pexchange/p2pexchange/assets/images/logoIcon/logo.png">
+    <link rel="apple-touch-icon" href="assets/images/logoIcon/logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="TMC P2P Exchange - Home">
     
     <meta itemprop="name" content="TMC P2P Exchange - Home">
     <meta itemprop="description" content="">
-    <meta itemprop="image" content="http://localhost/p2pexchange/p2pexchange/assets/images/seo/632f376d88a6d1664038765.png">
+    <meta itemprop="image" content="assets/images/seo/632f376d88a6d1664038765.png">
     
     <meta property="og:type" content="website">
     <meta property="og:title" content="TMC P2P Exchange - Ultimate Peer to Peer Crypto Exchange Platform">
     <meta property="og:description" content="TMC P2P Exchange is a p2p crypto exchange marketplace where people can trade crypto directly with each other.">
-    <meta property="og:image" content="http://localhost/p2pexchange/p2pexchange/assets/images/seo/632f376d88a6d1664038765.png"/>
+    <meta property="og:image" content="assets/images/seo/632f376d88a6d1664038765.png"/>
     <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1180" />
     <meta property="og:image:height" content="600" />
@@ -33,14 +33,14 @@
     
     <meta name="twitter:card" content="summary_large_image">
 
-    <link href="http://localhost/p2pexchange/p2pexchange/assets/global/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://localhost/p2pexchange/p2pexchange/assets/global/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/p2pexchange/assets/global/css/line-awesome.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/css/animate.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/css/slick.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/css/main.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/css/custom.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/css/color.php?color1=2A9ED0">
+    <link href="assets/global/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/global/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/global/css/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/templates/basic/css/animate.min.css">
+    <link rel="stylesheet" href="assets/templates/basic/css/slick.css">
+    <link rel="stylesheet" href="assets/templates/basic/css/main.css">
+    <link rel="stylesheet" href="assets/templates/basic/css/custom.css">
+    <link rel="stylesheet" href="assets/templates/basic/css/color.php?color1=2A9ED0">
 
             <style>
         .currency-loading {
@@ -69,7 +69,7 @@
     <div class="header__bottom">
         <div class="container">
             <nav class="navbar navbar-expand-xl p-0 align-items-center">
-                <a class="site-logo site-title" href="http://localhost/p2pexchange/p2pexchange"><img alt="site-logo" src="http://localhost/p2pexchange/p2pexchange/assets/images/logoIcon/logo.png"></a>
+                <a class="site-logo site-title" href="http://localhost/p2pexchange/p2pexchange"><img alt="site-logo" src="assets/images/logoIcon/logo.png"></a>
                 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler ms-auto shadow-none" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
                     <span class="menu-toggle"></span>
                 </button>
@@ -129,7 +129,7 @@
         
     
     <section class="hero bg_img"
-        data-background="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/banner/66238df900d811713606137.jpg">
+        data-background="assets/images/frontend/banner/66238df900d811713606137.jpg">
         <div class="container position-relative">
             <div class="row justify-content-between align-items-center">
                 <div class="col-xl-5 text-xl-start text-center">
@@ -139,7 +139,7 @@
                 <div class="col-xl-6 mt-5">
                     <div class="bitcoin-form-wrapper">
                         <div class="form-image">
-                            <img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/banner/62b6a521903841656136993.png">
+                            <img src="assets/images/frontend/banner/62b6a521903841656136993.png">
                         </div>
                         <h5 class="title text-white">Find Your Offers</h5>
                         <form class="bitcoin-form buy--sell-filter" method="GET">
@@ -969,7 +969,7 @@
                 </div>
     </div>
   </section>
-                    <section class="pt-120 pb-120 bg_img" data-background="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/buy/62b6aaec00f131656138476.jpg">
+                    <section class="pt-120 pb-120 bg_img" data-background="assets/images/frontend/buy/62b6aaec00f131656138476.jpg">
 
     <div class="container">
         <div class="row justify-content-center">
@@ -1129,7 +1129,7 @@
 </div>
 
 
-                    <section class="why-choose-section pt-120 pb-120 bg_img overlay--one" data-background="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/choose_us/62b6ab3a55c691656138554.jpg">
+                    <section class="why-choose-section pt-120 pb-120 bg_img overlay--one" data-background="assets/images/frontend/choose_us/62b6ab3a55c691656138554.jpg">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
@@ -1143,7 +1143,7 @@
                     <div class="col-lg-4 col-md-6 mb-30">
                 <div class="choose-card">
                     <div class="choose-card__icon">
-                        <img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/choose_us/62b6ac0a5f1451656138762.png" alt="image">
+                        <img src="assets/images/frontend/choose_us/62b6ac0a5f1451656138762.png" alt="image">
                     </div>
                     <div class="choose-card__content">
                         <h5 class="title mb-3">Legal Company</h5>
@@ -1154,7 +1154,7 @@
                     <div class="col-lg-4 col-md-6 mb-30">
                 <div class="choose-card">
                     <div class="choose-card__icon">
-                        <img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/choose_us/62b6abf67c9fb1656138742.png" alt="image">
+                        <img src="assets/images/frontend/choose_us/62b6abf67c9fb1656138742.png" alt="image">
                     </div>
                     <div class="choose-card__content">
                         <h5 class="title mb-3">High reliability</h5>
@@ -1165,7 +1165,7 @@
                     <div class="col-lg-4 col-md-6 mb-30">
                 <div class="choose-card">
                     <div class="choose-card__icon">
-                        <img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/choose_us/62b6abe6245c91656138726.png" alt="image">
+                        <img src="assets/images/frontend/choose_us/62b6abe6245c91656138726.png" alt="image">
                     </div>
                     <div class="choose-card__content">
                         <h5 class="title mb-3">Earn extra income</h5>
@@ -1176,7 +1176,7 @@
                     <div class="col-lg-4 col-md-6 mb-30">
                 <div class="choose-card">
                     <div class="choose-card__icon">
-                        <img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/choose_us/62b6abbdd734e1656138685.png" alt="image">
+                        <img src="assets/images/frontend/choose_us/62b6abbdd734e1656138685.png" alt="image">
                     </div>
                     <div class="choose-card__content">
                         <h5 class="title mb-3">Sell Bitcoin online</h5>
@@ -1187,7 +1187,7 @@
                     <div class="col-lg-4 col-md-6 mb-30">
                 <div class="choose-card">
                     <div class="choose-card__icon">
-                        <img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/choose_us/62b6aba84854d1656138664.png" alt="image">
+                        <img src="assets/images/frontend/choose_us/62b6aba84854d1656138664.png" alt="image">
                     </div>
                     <div class="choose-card__content">
                         <h5 class="title mb-3">Buy Bitcoin Online</h5>
@@ -1198,7 +1198,7 @@
                     <div class="col-lg-4 col-md-6 mb-30">
                 <div class="choose-card">
                     <div class="choose-card__icon">
-                        <img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/choose_us/62b6ab4f5ed201656138575.png" alt="image">
+                        <img src="assets/images/frontend/choose_us/62b6ab4f5ed201656138575.png" alt="image">
                     </div>
                     <div class="choose-card__content">
                         <h5 class="title mb-3">Easy Access</h5>
@@ -1317,7 +1317,7 @@
         </div>
     </div>
 </section>
-                    <section class="pt-120 pb-120 overlay--one bg_img" data-background="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/testimonial/62b6ae9f2458b1656139423.jpg">
+                    <section class="pt-120 pb-120 overlay--one bg_img" data-background="assets/images/frontend/testimonial/62b6ae9f2458b1656139423.jpg">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
@@ -1336,7 +1336,7 @@
                         <p>The website provides a variety of related services.  This is best for crypto exchange among other features. This is best site for all</p>
                     </div>
                     <div class="testimonial-card__client text-center mt-4">
-                        <div class="thumb"><img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/testimonial/62b6af463df2d1656139590.jpg" alt="image"></div>
+                        <div class="thumb"><img src="assets/images/frontend/testimonial/62b6af463df2d1656139590.jpg" alt="image"></div>
                         <h6 class="name mt-2">Hopper</h6>
                     </div>
                 </div>
@@ -1348,7 +1348,7 @@
                         <p>I do business here for a long time. They give fast service and I feel trusted here. This is best for crypto exchange among other features.</p>
                     </div>
                     <div class="testimonial-card__client text-center mt-4">
-                        <div class="thumb"><img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/testimonial/62b6af34efd031656139572.jpg" alt="image"></div>
+                        <div class="thumb"><img src="assets/images/frontend/testimonial/62b6af34efd031656139572.jpg" alt="image"></div>
                         <h6 class="name mt-2">Danniel</h6>
                     </div>
                 </div>
@@ -1360,7 +1360,7 @@
                         <p>Localcoins is the best website for selling bitcoin and making cash. They provide authentic services.  This is best for the crypto exchange platforms.</p>
                     </div>
                     <div class="testimonial-card__client text-center mt-4">
-                        <div class="thumb"><img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/testimonial/62b6af24201491656139556.jpg" alt="image"></div>
+                        <div class="thumb"><img src="assets/images/frontend/testimonial/62b6af24201491656139556.jpg" alt="image"></div>
                         <h6 class="name mt-2">Mark</h6>
                     </div>
                 </div>
@@ -1372,7 +1372,7 @@
                         <p>BITCCA is a company and website dedicated to the bitcoin cash and bitcoin selling platform. The website provides a variety of related services.</p>
                     </div>
                     <div class="testimonial-card__client text-center mt-4">
-                        <div class="thumb"><img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/testimonial/62b6af0fb231a1656139535.jpg" alt="image"></div>
+                        <div class="thumb"><img src="assets/images/frontend/testimonial/62b6af0fb231a1656139535.jpg" alt="image"></div>
                         <h6 class="name mt-2">Mr. Pop</h6>
                     </div>
                 </div>
@@ -1384,7 +1384,7 @@
                         <p>The website provides a variety of related services.  This is best for crypto exchange among other features.</p>
                     </div>
                     <div class="testimonial-card__client text-center mt-4">
-                        <div class="thumb"><img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/testimonial/62b6aefd0f7c21656139517.jpg" alt="image"></div>
+                        <div class="thumb"><img src="assets/images/frontend/testimonial/62b6aefd0f7c21656139517.jpg" alt="image"></div>
                         <h6 class="name mt-2">Clark</h6>
                     </div>
                 </div>
@@ -1396,7 +1396,7 @@
                         <p>This is best for crypto exchange among other features. This is best for crypto exchange among other features.</p>
                     </div>
                     <div class="testimonial-card__client text-center mt-4">
-                        <div class="thumb"><img src="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/testimonial/62b6aee9d81741656139497.jpg" alt="image"></div>
+                        <div class="thumb"><img src="assets/images/frontend/testimonial/62b6aee9d81741656139497.jpg" alt="image"></div>
                         <h6 class="name mt-2">Lucee</h6>
                     </div>
                 </div>
@@ -1424,13 +1424,13 @@
     </span>
 </div>
 
-<footer class="footer-section bg_img" data-background="http://localhost/p2pexchange/p2pexchange/assets/images/frontend/footer/62b1a078224bf1655808120.jpg">
+<footer class="footer-section bg_img" data-background="assets/images/frontend/footer/62b1a078224bf1655808120.jpg">
     <div class="footer-top">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-5 col-12">
                     <div class="footer-widget text-center">
-                        <a href="http://localhost/p2pexchange/p2pexchange" class="footer-logo mb-4"><img src="http://localhost/p2pexchange/p2pexchange/assets/images/logoIcon/logo.png" alt="image"></a>
+                        <a href="http://localhost/p2pexchange/p2pexchange" class="footer-logo mb-4"><img src="assets/images/logoIcon/logo.png" alt="image"></a>
                         <p>TMC P2P Exchange helps you receive payments from anyone in the world.</p>
                         <ul class="social-links mt-4 justify-content-center">
                                                             <li><a href="https://www.facebook.com/" target="_blank"><i class="lab la-facebook-f"></i></a></li>
@@ -1468,11 +1468,11 @@
 
     
     
-    <script src="http://localhost/p2pexchange/p2pexchange/assets/global/js/jquery-3.6.0.min.js"></script>
-    <script src="http://localhost/p2pexchange/p2pexchange/assets/global/js/bootstrap.bundle.min.js"></script>
-    <script src="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/js/slick.min.js"></script>
-    <script src="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/js/wow.min.js"></script>
-    <script src="http://localhost/p2pexchange/p2pexchange/assets/templates/basic/js/main.js"></script>
+    <script src="assets/global/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/global/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/templates/basic/js/slick.min.js"></script>
+    <script src="assets/templates/basic/js/wow.min.js"></script>
+    <script src="assets/templates/basic/js/main.js"></script>
 
             <script>
         'use strict';
@@ -1631,8 +1631,8 @@
             };
         })(jQuery)
     </script>
-        <link rel="stylesheet" href="http://localhost/p2pexchange/p2pexchange/assets/global/css/iziToast.min.css">
-<script src="http://localhost/p2pexchange/p2pexchange/assets/global/js/iziToast.min.js"></script>
+        <link rel="stylesheet" href="assets/global/css/iziToast.min.css">
+<script src="assets/global/js/iziToast.min.js"></script>
 
 
 
