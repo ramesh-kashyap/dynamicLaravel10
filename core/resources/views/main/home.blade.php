@@ -12,7 +12,7 @@
     <meta name="keywords" content="crypto,cryptocurrency,cryptocurrencies,exchange,cryptoexchange,bitcoin,etherium">
     <link rel="shortcut icon" href="assets/images/logoIcon/favicon.png" type="image/x-icon">
 
-    
+
     <link rel="apple-touch-icon" href="assets/images/logoIcon/logo.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="assets/templates/basic/css/color.php?color1=2A9ED0">
 
 
-    
+
             <style>
         .currency-loading {
             height: 400px;
