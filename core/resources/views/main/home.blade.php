@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> TMC P2P Exchange - Home</title>
+    <title> TMC P2P</title>
 
     <meta name="title" Content="TMC P2P Exchange - Home">
     <meta name="description" content="TMC P2P Exchange is a p2p crypto exchange marketplace where people can trade crypto directly with each other.">
