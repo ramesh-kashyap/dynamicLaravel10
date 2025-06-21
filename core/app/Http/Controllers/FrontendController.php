@@ -6,9 +6,5 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-     public function pages($slug)
-    {
-       
-    }
-
+    
 }
