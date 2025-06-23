@@ -68,11 +68,12 @@ class LoginController extends Controller
 
   
 
-
-    public function logout(Request $request)
+    public function admin_sign_out()
     {
-        $this->guard('admin')->logout();
-        $request->session()->invalidate();
-        return $this->loggedOut($request) ?: redirect($this->redirectTo);
+         Auth::guard('admin')->logout();
+         $notify[] = ['success', 'Admin Logout successfully'];
+        return redirect()->route('admin.admin-login')->withNotify($notify);
+
     }
+
 }
