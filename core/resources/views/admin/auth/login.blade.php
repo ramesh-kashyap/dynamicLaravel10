@@ -33,30 +33,32 @@
                                     Dashboard</p>
                             </div>
                             <div class="login-wrapper__body">
-                            <form action="{{route('login')}}" method="post" class="cmn-form mt-30 verify-gcaptcha login-form">
-                                    @csrf
-                                    <label>Username</label>
-                                    <input type="text" class="form-control" value="" name="username" required>
+                                <form action="{{ route('admin.login') }}" method="POST" class="cmn-form mt-30 verify-gcaptcha login-form">
+                                 @csrf
+
+                                    <div class="form-group">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control" name="username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" name="password" required>
+                                    </div>
+                                    <div class="d-flex flex-wrap justify-content-between">
+                                        <div class="form-check me-3">
+                                            <input class="form-check-input" name="remember" type="checkbox" id="remember">
+                                            <label class="form-check-label" for="remember">Remember Me</label>
+                                        </div>
+                                        <a href="" class="forget-text">Forgot Password?</a>
+                                    </div>
+                                    <button type="submit" class="btn cmn-btn w-100">LOGIN</button>
+                                </form>
                             </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" class="form-control" name="password" required>
-                            </div>
-                            <div class="d-flex flex-wrap justify-content-between">
-                                <div class="form-check me-3">
-                                    <input class="form-check-input" name="remember" type="checkbox" id="remember">
-                                    <label class="form-check-label" for="remember">Remember Me</label>
-                                </div>
-                                <a href="#" class="forget-text">Forgot Password?</a>
-                            </div>
-                            <button type="submit" class="btn cmn-btn w-100">LOGIN</button>
-                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <script src="assets/global/js/jquery-3.6.0.min.js"></script>
