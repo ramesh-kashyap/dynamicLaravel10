@@ -8,5 +8,16 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, ValidatesRequests;
+      use AuthorizesRequests, ValidatesRequests;
+    protected $data;
+
+    protected function dashboard_layout(){
+        return view('user.main',$this->data);
+    }
+
+    protected function admin_dashboard(){
+        return view('admin.main',$this->data);
+    }
+    
+
 }

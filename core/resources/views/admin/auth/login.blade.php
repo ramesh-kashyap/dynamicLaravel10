@@ -33,7 +33,7 @@
                                     Dashboard</p>
                             </div>
                             <div class="login-wrapper__body">
-                            <form action="{{route('logins')}}" method="post" class="cmn-form mt-30 verify-gcaptcha login-form">
+                            <form action="{{route('login')}}" method="post" class="cmn-form mt-30 verify-gcaptcha login-form">
                                     @csrf
                                     <label>Username</label>
                                     <input type="text" class="form-control" value="" name="username" required>
