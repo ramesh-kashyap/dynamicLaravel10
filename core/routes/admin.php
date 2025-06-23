@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Route::namespace('Auth')->group(function () {
 
     Route::controller('LoginController')->group(function () {
         Route::get('/', 'showLoginForm')->name('login');
@@ -20,6 +21,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('password/reset/{token}', 'showResetForm')->name('password.reset.form');
         Route::post('password/reset/change', 'reset')->name('password.change');
     });
+});
 
 
 Route::middleware('admin')->group(function () {
