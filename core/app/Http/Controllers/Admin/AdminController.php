@@ -22,54 +22,9 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $pageTitle = 'Dashboard';
+        
 
-        // User Info
-        $widget['totalUsers']              = User::count();
-        $widget['activeUsers']             = User::active()->count();
-        $widget['emailUnverifiedUsers']    = User::emailUnverified()->count();
-        $widget['mobileUnverifiedUsers']   = User::mobileUnverified()->count();
-        $widget['totalAd']                 = Advertisement::count();
-        $widget['totalTrade']              = Trade::count();
-        $widget['totalCrypto']             = CryptoCurrency::count();
-        $widget['totalFiat']               = FiatCurrency::count();
-        $widget['totalWithdrawApproved']   = Withdrawal::approved()->count();
-        $widget['totalWithdrawPending']    = Withdrawal::pending()->count();
-        $widget['totalWithdrawRejected']   = Withdrawal::rejected()->count();
-        $widget['totalWithdraw']          = Withdrawal::where('status', '!=', 0)->count();
-
-        $withdrawals =  CryptoCurrency::withSum(['withdrawals' => function ($withdrawals) {
-            $withdrawals->where('status', Status::PAYMENT_SUCCESS);
-        }], 'amount')->withSum(['withdrawals' => function ($withdrawals) {
-            $withdrawals->where('status', Status::PAYMENT_SUCCESS);
-        }], 'charge')->latest()->get();
-
-        $deposits =  CryptoCurrency::withSum(['deposits' => function ($deposits) {
-            $deposits->where('status', Status::PAYMENT_SUCCESS);
-        }], 'amount')->withSum(['deposits' => function ($deposits) {
-            $deposits->where('status', Status::PAYMENT_SUCCESS);
-        }], 'charge')->latest()->get();
-
-
-        // user Browsing, Country, Operating Log
-        $userLoginData = UserLogin::where('created_at', '>=', Carbon::now()->subDay(30))->get(['browser', 'os', 'country']);
-
-        $chart['user_browser_counter'] = $userLoginData->groupBy('browser')
-            ->map(function ($item, $key) {
-                return collect($item)->count();
-            });
-
-        $chart['user_os_counter']      = $userLoginData->groupBy('os')
-            ->map(function ($item, $key) {
-                return collect($item)->count();
-            });
-
-        $chart['user_country_counter'] = $userLoginData->groupBy('country')
-            ->map(function ($item, $key) {
-                return collect($item)->count();
-            })->sort()->reverse()->take(5);
-
-        return view('admin.dashboard', compact('pageTitle', 'widget', 'withdrawals', 'deposits', 'chart'));
+        return view('admin.dashboard');
     }
 
 
