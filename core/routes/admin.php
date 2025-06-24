@@ -5,8 +5,8 @@ Route::namespace('Auth')->group(function () {
 
     Route::controller('LoginController')->group(function () {
         Route::get('/', 'showLoginForm')->name('login');
-        Route::post('/submit', 'login')->name('login');
-        Route::get('admin-logout', 'admin_sign_out')->name('admin.admin-logout');
+        Route::post('/', 'login')->name('login.submit');
+        Route::get('logout', 'logout')->middleware('admin')->name('logout');
     });
 
     // Admin Password Reset
