@@ -159,7 +159,7 @@ Route::middleware('admin')->group(function () {
             Route::get('approved', 'approved')->name('approved');
             Route::get('rejected', 'rejected')->name('rejected');
             Route::get('log', 'log')->name('log');
-            Route::get('details/{id}', 'details')->name('details');
+            Route::get('details/{id}', 'details')->name('details'); 
             Route::post('approve', 'approve')->name('approve');
             Route::post('reject', 'reject')->name('reject');
         });
