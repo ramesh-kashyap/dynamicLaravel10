@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMC P2P Exchange - Dashboard</title>
 
-    <link rel="shortcut icon" type="image/png" href="http://localhost/p2pexchange/assets/images/logoIcon/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../assets/images/logoIcon/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/bootstrap-toggle.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/all.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../assets/global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/admin/css/vendor/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="../assets/global/css/all.min.css">
+    <link rel="stylesheet" href="../assets/global/css/line-awesome.min.css">
 
 
     <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/select2.min.css">
@@ -165,14 +165,14 @@
                     <div class="sidebar-submenu  ">
                         <ul>
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/limit" class="nav-link">
+                                <a href="../admin/limit" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Limit</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/advertisement" class="nav-link">
+                                <a href="../admin/advertisement" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Advertisements</span>
                                 </a>
@@ -191,14 +191,14 @@
 
 
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/trade/running" class="nav-link">
+                                <a href="../admin/trade/running" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Running</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/trade/reported" class="nav-link">
+                                <a href="../admin/trade/reported" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Reported</span>
 
@@ -206,14 +206,14 @@
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/trade/completed" class="nav-link">
+                                <a href="../admin/trade/completed" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Completed</span>
                                 </a>
                             </li>
 
                               <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/trade" class="nav-link">
+                                <a href="../admin/trade" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">All</span>
                                 </a>
@@ -237,7 +237,7 @@
                 </li>
 
                 <li class="sidebar-menu-item ">
-                    <a href="http://localhost/p2pexchange/admin/fiat-gateways" class="nav-link ">
+                    <a href="../admin/fiat-gateways" class="nav-link ">
                         <i class="menu-icon las la-wallet"></i>
                         <span class="menu-title">Fiat Gateways</span>
                     </a>
@@ -422,21 +422,21 @@
                     <div class="sidebar-submenu  ">
                         <ul>
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/report/transaction" class="nav-link">
+                                <a href="../admin/report/transaction" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Transaction Log</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/report/login/history" class="nav-link">
+                                <a href="../admin/report/login/history" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Login History</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="http://localhost/p2pexchange/admin/report/notification/history" class="nav-link">
+                                <a href="../admin/report/notification/history" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Notification History</span>
                                 </a>
