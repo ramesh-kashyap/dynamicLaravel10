@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Laramin\Utility\Onumoti;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -56,20 +58,36 @@ class LoginController extends Controller
     {
         return auth()->guard('admin');
     }
+
     public function login(Request $request)
     {
+       try {
         $request->validate([
-            'username' => 'required',
-            'password' => 'required'
+            'username' => 'required|string',
+            'password' => 'required|string',
         ]);
 
-        $credentials = $request->only('username', 'password');
+        // Find admin by username
+        $admin = Admin::where('username', $request->username)->first();
 
-        if (Auth::guard('admin')->attempt($credentials)) {
-            return redirect()->route('admin.dashboard');
+        if (!$admin) {
+            return back()->withErrors(['username' => 'Username not found']);
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials']);
+        // Verify password using Hash check
+        if (!Hash::check($request->password, $admin->password)) {
+            return back()->withErrors(['password' => 'Incorrect password']);
+        }
+
+        // Login manually using Auth::guard
+        Auth::guard('admin')->login($admin);
+
+        return redirect()->route('admin.dashboard')->with('success', 'Login successful');
+
+    } catch (\Exception $e) {
+        return back()->withErrors(['error' => 'Something went wrong. Please try again.']);
+    }
+        
     }
 
   
@@ -78,7 +96,7 @@ class LoginController extends Controller
     {
         Auth::guard('admin')->logout();
          $notify[] = ['success', 'Admin Logout successfully'];
-        return redirect()->route('login')->withNotify($notify);
+        return redirect()->route('admin.login')->withNotify($notify);
 
     }
 
