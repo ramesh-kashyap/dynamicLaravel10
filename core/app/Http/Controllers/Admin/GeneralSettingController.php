@@ -9,9 +9,13 @@ use App\Models\Frontend;
 
 class GeneralSettingController extends Controller
 {
-    public function index()
+   
+    public function logoIcon()
     {
 
-        return view('admin.setting.general');
-    }  
+     $this->data['page'] = 'admin.setting.logo_icon';
+     return $this->admin_dashboard();
+
+    }
+     
 }

@@ -3,16 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Extension;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class ExtensionController extends Controller
 {
    
-   public function dashboard()
+    public function index()
     {
      
-     $this->data['page'] = 'admin.dashboard';
+     $this->data['page'] = 'admin.setting.extensions';
      return $this->admin_dashboard();
 
-    }    
+    }
+
+   
 }

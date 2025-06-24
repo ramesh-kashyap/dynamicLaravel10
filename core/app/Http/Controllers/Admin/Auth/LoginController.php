@@ -74,7 +74,6 @@ class LoginController extends Controller
             return back()->withErrors(['username' => 'Username not found']);
         }
 
-        // Verify password using Hash check
         if (!Hash::check($request->password, $admin->password)) {
             return back()->withErrors(['password' => 'Incorrect password']);
         }
@@ -92,7 +91,7 @@ class LoginController extends Controller
 
   
 
-    
+
 
  public function logout()
     {
