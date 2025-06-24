@@ -31,7 +31,7 @@
         <div class="row gy-4">
             <div class="col-xxl-3 col-sm-6">
                 <div class="card bg--primary overflow-hidden box--shadow2">
-                    <a href="http://localhost/p2pexchange/admin/users" class="item-link"></a>
+                    <a href="{{ route('admin.users.all') }}" class="item-link"></a>
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-4">
@@ -39,7 +39,7 @@
                             </div>
                             <div class="col-8 text-end">
                                 <span class="text--white text--small">Total Users</span>
-                                <h2 class="text--white">0</h2>
+                                <h2 class="text--white">{{\App\Models\User::count()}}</h2>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                             </div>
                             <div class="col-8 text-end">
                                 <span class="text--white text--small">Active Users</span>
-                                <h2 class="text--white">0</h2>
+                                <h2 class="text--white">{{\App\Models\User::where('active_status','Active')->count()}}</h2>
                             </div>
                         </div>
                     </div>
@@ -65,42 +65,8 @@
 
 
             </div>
-            <div class="col-xxl-3 col-sm-6">
-                <div class="card bg--danger overflow-hidden box--shadow2">
-                    <a href="http://localhost/p2pexchange/admin/users/email-unverified" class="item-link"></a>
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-4">
-                                <i class="la lar la-envelope f-size--56 f-size--56 text--white"></i>
-                            </div>
-                            <div class="col-8 text-end">
-                                <span class="text--white text--small">Email Unverified Users</span>
-                                <h2 class="text--white">0</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <div class="col-xxl-3 col-sm-6">
-                <div class="card bg--red overflow-hidden box--shadow2">
-                    <a href="http://localhost/p2pexchange/admin/users/mobile-unverified" class="item-link"></a>
-                    <div class="card-body">
-                        <div class="row align-items-center">
-                            <div class="col-4">
-                                <i class="la las la-comment-slash f-size--56 f-size--56 text--white"></i>
-                            </div>
-                            <div class="col-8 text-end">
-                                <span class="text--white text--small">Mobile Unverified Users</span>
-                                <h2 class="text--white">0</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+           
+          
         </div><!-- row end-->
 
         <div class="row gy-4 mt-2">
@@ -111,7 +77,7 @@
                     </div>
 
                     <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
+                        <h3 class="text-white"> {{  number_format((\App\Models\Withdraw::where('status','Approved')->sum('amount')),2)   }}</h3>
                         <p class="text-white">Approved Withdrawal</p>
                     </div>
                     <a href="http://localhost/p2pexchange/admin/withdraw/log" class="widget-two__btn">View All</a>
@@ -124,7 +90,7 @@
                     </div>
 
                     <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
+                        <h3 class="text-white">{{  number_format((\App\Models\Withdraw::where('status','Pending')->sum('amount')),2)   }}</h3>
                         <p class="text-white">Pending Withdrawals</p>
                     </div>
                     <a href="http://localhost/p2pexchange/admin/withdraw/pending" class="widget-two__btn">View All</a>
@@ -137,7 +103,7 @@
                     </div>
 
                     <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
+                        <h3 class="text-white">{{  number_format((\App\Models\Withdraw::where('status','Failed')->sum('amount')),2)   }}</h3>
                         <p class="text-white">Rejected Withdrawals</p>
                     </div>
                     <a href="http://localhost/p2pexchange/admin/withdraw/rejected" class="widget-two__btn">View All</a>
@@ -149,10 +115,13 @@
                         <i class="la la-bank"></i>
                     </div>
 
-                    <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
-                        <p class="text-white">Total Withdrawals</p>
-                    </div>
+                 <div class="widget-two__content">
+    <h3 class="text-white">
+        {{ number_format((\App\Models\Withdraw::where('status', '!=', 'Failed')->sum('amount')), 2) }}
+    </h3>
+    <p class="text-white">Total Withdrawals</p>
+</div>
+
                     <a href="http://localhost/p2pexchange/admin/withdraw/log" class="widget-two__btn">View All</a>
                 </div>
             </div>
@@ -175,8 +144,8 @@
                     </div>
 
                     <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
-                        <p class="text-white">Total Adveretisements</p>
+                        <h3 class="text-white">{{ number_format((\App\Models\Investment::where('status', '!=', 'Decline')->sum('amount')), 2) }}</h3>
+                        <p class="text-white">Total Investment</p>
                     </div>
                     <a href="http://localhost/p2pexchange/admin/advertisement" class="widget-two__btn">View All</a>
                 </div>
@@ -188,8 +157,8 @@
                     </div>
 
                     <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
-                        <p class="text-white">Total Trades</p>
+                        <h3 class="text-white">{{ number_format((\App\Models\Investment::where('status', 'Active')->sum('amount')), 2) }}</h3>
+                        <p class="text-white">Approve Investment </p>
                     </div>
                     <a href="http://localhost/p2pexchange/admin/trade" class="widget-two__btn">View All</a>
                 </div>
@@ -201,8 +170,8 @@
                     </div>
 
                     <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
-                        <p class="text-white">Total Cryptocurrency</p>
+                        <h3 class="text-white">{{ number_format((\App\Models\Investment::where('status', 'Pending')->sum('amount')), 2) }}</h3>
+                        <p class="text-white">Pending Investment </p>
                     </div>
                     <a href="http://localhost/p2pexchange/admin/crypto-currencies" class="widget-two__btn">View All</a>
                 </div>
@@ -214,8 +183,8 @@
                     </div>
 
                     <div class="widget-two__content">
-                        <h3 class="text-white">0</h3>
-                        <p class="text-white">Total Fiat Currency</p>
+                        <h3 class="text-white">{{ number_format((\App\Models\Investment::where('status', 'Decline')->sum('amount')), 2) }}</h3>
+                        <p class="text-white">Reject Investment</p>
                     </div>
                     <a href="http://localhost/p2pexchange/admin/fiat-currencies" class="widget-two__btn">View All</a>
                 </div>
@@ -224,113 +193,70 @@
 
         <div class="row gy-4 mt-2">
             <div class="col-md-12">
-                <h4>Withdrawal Summary</h4>
+                <h4>Incomes Summary</h4>
             </div>
         </div>
 
         <div class="row gy-4 mt-2">
         </div>
 
-        <div class="row mb-none-30 mt-5">
-            <div class="col-xl-4 col-lg-6 mb-30">
-                <div class="card overflow-hidden">
-                    <div class="card-body">
-                        <h5 class="card-title">Login By Browser (Last 30 days)</h5>
-                        <canvas id="userBrowserChart"></canvas>
+         <div class="row gy-4 mt-2">
+            <div class="col-xxl-3 col-sm-6">
+                <div class="widget-two style--two box--shadow2 b-radius--5 bg--19">
+                    <div class="widget-two__icon b-radius--5 bg--19">
+                        <i class="lab la-adversal"></i>
                     </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 mb-30">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Login By OS (Last 30 days)</h5>
-                        <canvas id="userOsChart"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 mb-30">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Login By Country (Last 30 days)</h5>
-                        <canvas id="userCountryChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-
-        <div class="modal fade" id="cronModal" role="dialog" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Please Set Cron Job Now</h5>
-                        <button aria-label="Close" class="close" data-bs-dismiss="modal" type="button">
-                            <i class="las la-times"></i>
-                        </button>
+                    <div class="widget-two__content">
+                        <h3 class="text-white">{{ number_format((\App\Models\Income::where('remarks', 'Roi Bonus')->sum('comm')), 2) }}</h3>
+                        <p class="text-white">Roi Incomes</p>
                     </div>
-                    <div class="modal-body">
-                        <div class="form-group text-center border-bottom mb-4">
-                            <div class="text--primary">
-                                <i class="las la-info-circle"></i>
-                                Set the Cron time ASAP
-                            </div>
-                            <p class="fst-italic">
-                                Once per 5-15 minutes is ideal while once every minute is the best option </p>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <div class="justify-content-between d-flex flex-wrap">
-                                        <div>
-                                            <label class="fw-bold">Cron Command</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-group">
-                                        <input class="form-control form-control-lg" id="cron" readonly type="text" value="curl -s http://localhost/p2pexchange/cron">
-                                        <button class="input-group-text copytext btn--primary copyCronPath border--primary" data-id="cron" type="button"> Copy</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="http://localhost/p2pexchange/admin/advertisement" class="widget-two__btn">View All</a>
                 </div>
             </div>
-        </div>
+            <div class="col-xxl-3 col-sm-6">
+                <div class="widget-two style--two box--shadow2 b-radius--5 bg--primary">
+                    <div class="widget-two__icon b-radius--5 bg--primary">
+                        <i class="las la-exchange-alt"></i>
+                    </div>
 
-        <div class="modal fade" id="cronModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Cron Job Setting Instruction</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <i class="las la-times"></i>
-                        </button>
+                    <div class="widget-two__content">
+                        <h3 class="text-white">{{ number_format((\App\Models\Income::where('remarks', 'Level Bonus')->sum('comm')), 2) }}</h3>
+                        <p class="text-white">Level Incomes </p>
                     </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="form-group text-center border-bottom mb-4">
-                                    <div class="text--primary">
-                                        <i class="las la-info-circle"></i>
-                                        Set the Cron time ASAP
-                                    </div>
-                                    <p class="fst-italic">
-                                        Once per 5-15 minutes is ideal while once every minute is the best option </p>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <label>Cron Command</label>
-                                <div class="input-group">
-                                    <input type="text" class="form-control copyText" value="curl -s http://localhost/p2pexchange/cron"
-                                        readonly>
-                                    <button class="input-group-text btn--primary copyBtn border-0"> COPY</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="http://localhost/p2pexchange/admin/trade" class="widget-two__btn">View All</a>
                 </div>
             </div>
-        </div>
+            <div class="col-xxl-3 col-sm-6">
+                <div class="widget-two style--two box--shadow2 b-radius--5 bg--1">
+                    <div class="widget-two__icon b-radius--5 bg--1">
+                        <i class="lab la-bitcoin"></i>
+                    </div>
+
+                    <div class="widget-two__content">
+                        <h3 class="text-white">{{ number_format((\App\Models\Income::where('remarks', 'Direct Bonus')->sum('comm')), 2) }}</h3>
+                        <p class="text-white">Direct Incomes </p>
+                    </div>
+                    <a href="http://localhost/p2pexchange/admin/crypto-currencies" class="widget-two__btn">View All</a>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-sm-6">
+                <div class="widget-two style--two box--shadow2 b-radius--5 bg--success">
+                    <div class="widget-two__icon b-radius--5 bg--success">
+                        <i class="las la-coins"></i>
+                    </div>
+
+                    <div class="widget-two__content">
+                        <h3 class="text-white">{{ number_format((\App\Models\Income::where('remarks', 'Royalty Bonus')->sum('comm')), 2) }}</h3>
+                        <p class="text-white">Royalty Incomes</p>
+                    </div>
+                    <a href="http://localhost/p2pexchange/admin/fiat-currencies" class="widget-two__btn">View All</a>
+                </div>
+            </div>
+        </div><!-- row end-->
+
+       
+        
 
 
 

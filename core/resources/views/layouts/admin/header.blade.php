@@ -493,41 +493,41 @@
                             </a>
                         </li>
 
-                        <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/setting/logo-icon" class="nav-link">
-                                <i class="menu-icon las la-images"></i>
-                                <span class="menu-title">Logo & Favicon</span>
-                            </a>
-                        </li>
+                <li class="sidebar-menu-item ">
+                    <a href="{{route('admin.setting.logo.icon')}}" class="nav-link">
+                        <i class="menu-icon las la-images"></i>
+                        <span class="menu-title">Logo & Favicon</span>
+                    </a>
+                </li>
 
-                        <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/extensions" class="nav-link">
-                                <i class="menu-icon las la-cogs"></i>
-                                <span class="menu-title">Extensions</span>
-                            </a>
-                        </li>
+                <li class="sidebar-menu-item ">
+                    <a href="{{route('admin.extensions.index')}}" class="nav-link">
+                        <i class="menu-icon las la-cogs"></i>
+                        <span class="menu-title">Extensions</span>
+                    </a>
+                </li>
 
-                        <li class="sidebar-menu-item  ">
-                            <a href="http://localhost/p2pexchange/admin/language" class="nav-link"
-                                data-default-url="http://localhost/p2pexchange/admin/language">
-                                <i class="menu-icon las la-language"></i>
-                                <span class="menu-title">Language </span>
-                            </a>
-                        </li>
+                <li class="sidebar-menu-item  ">
+                    <a href="{{route('admin.language.manage')}}" class="nav-link"
+                       data-default-url="../admin/language">
+                        <i class="menu-icon las la-language"></i>
+                        <span class="menu-title">Language </span>
+                    </a>
+                </li>
 
-                        <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/seo" class="nav-link">
-                                <i class="menu-icon las la-globe"></i>
-                                <span class="menu-title">SEO Manager</span>
-                            </a>
-                        </li>
+                <li class="sidebar-menu-item ">
+                    <a href="{{route('admin.seo')}}" class="nav-link">
+                        <i class="menu-icon las la-globe"></i>
+                        <span class="menu-title">SEO Manager</span>
+                    </a>
+                </li>
 
-                        <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/kyc-setting" class="nav-link">
-                                <i class="menu-icon las la-user-check"></i>
-                                <span class="menu-title">KYC Setting</span>
-                            </a>
-                        </li>
+                <li class="sidebar-menu-item ">
+                    <a href="{{route('admin.kyc.setting')}}" class="nav-link">
+                        <i class="menu-icon las la-user-check"></i>
+                        <span class="menu-title">KYC Setting</span>
+                    </a>
+                </li>
 
 
                         <!-- <li class="sidebar-menu-item sidebar-dropdown">
