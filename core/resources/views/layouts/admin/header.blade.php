@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMC P2P Exchange - Dashboard</title>
-
-    <link rel="shortcut icon" type="image/png" href="../assets/images/logoIcon/favicon.png">
+   <link rel="shortcut icon" type="image/png" href="http://localhost/p2pexchange/assets/images/logoIcon/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/admin/css/vendor/bootstrap-toggle.min.css">
-    <link rel="stylesheet" href="../assets/global/css/all.min.css">
-    <link rel="stylesheet" href="../assets/global/css/line-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/line-awesome.min.css">
 
+        <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/datepicker.min.css">
 
     <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/select2.min.css">
     <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/app.css">
@@ -86,13 +86,13 @@
             <button class="res-sidebar-close-btn"><i class="las la-times"></i></button>
             <div class="sidebar__inner">
                 <div class="sidebar__logo">
-                    <a href="/admin" class="sidebar__main-logo"><img src="http://localhost/p2pexchange/assets/images/logoIcon/logo.png" alt="image"></a>
+                    <a href="{{route('admin.dashboard')}}" class="sidebar__main-logo"><img src="http://localhost/p2pexchange/assets/images/logoIcon/logo.png" alt="image"></a>
                 </div>
 
                 <div class="sidebar__menu-wrapper" id="sidebar__menuWrapper">
                     <ul class="sidebar__menu">
                         <li class="sidebar-menu-item active">
-                            <a href="http://localhost/p2pexchange/admin/dashboard" class="nav-link ">
+                            <a href="{{route('admin.dashboard')}}" class="nav-link ">
                                 <i class="menu-icon las la-home"></i>
                                 <span class="menu-title">Dashboard</span>
                             </a>
@@ -106,13 +106,13 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/users/active" class="nav-link">
+                                        <a href="{{route('admin.users.active')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Active Users</span>
                                         </a>
                                     </li>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/users/banned" class="nav-link">
+                                        <a href="{{route('admin.users.pending')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Pending Users</span>
                                         </a>
@@ -133,19 +133,19 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                       <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/users/active" class="nav-link">
+                                        <a href="{{route('admin.users.total-user')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Total Users</span>
                                         </a>
                                     </li>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/users/active" class="nav-link">
+                                        <a href="{{route('admin.users.edit-user')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
-                                            <span class="menu-title">Active Users</span>
+                                            <span class="menu-title">Edit Users</span>
                                         </a>
                                     </li>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/users/banned" class="nav-link">
+                                        <a href="{{route('admin.users.block-user')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Block Users</span>
                                         </a>
@@ -165,14 +165,14 @@
                     <div class="sidebar-submenu  ">
                         <ul>
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/limit" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/limit" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Limit</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/advertisement" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/advertisement" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Advertisements</span>
                                 </a>
@@ -191,14 +191,14 @@
 
 
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/trade/running" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/trade/running" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Running</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/trade/reported" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/trade/reported" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Reported</span>
 
@@ -206,14 +206,14 @@
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/trade/completed" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/trade/completed" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Completed</span>
                                 </a>
                             </li>
 
                               <li class="sidebar-menu-item ">
-                                <a href="../admin/trade" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/trade" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">All</span>
                                 </a>
@@ -237,7 +237,7 @@
                 </li>
 
                 <li class="sidebar-menu-item ">
-                    <a href="../admin/fiat-gateways" class="nav-link ">
+                    <a href="http://localhost/p2pexchange/admin/usersadmin/fiat-gateways" class="nav-link ">
                         <i class="menu-icon las la-wallet"></i>
                         <span class="menu-title">Fiat Gateways</span>
                     </a>
@@ -249,7 +249,7 @@
                         <span class="menu-title">Payment Windows</span>
                     </a>
                 </li> -->
-                               <li class="sidebar-menu-item  ">
+                               <!-- <li class="sidebar-menu-item  ">
                                         <a href="http://localhost/p2pexchange/admin/withdraw/log" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">User Activatation</span>
@@ -260,7 +260,7 @@
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Add Content</span>
                                         </a>
-                                    </li>
+                                    </li> -->
 
                        <li class="sidebar-menu-item sidebar-dropdown">
                             <a href="javascript:void(0)" class="">
@@ -270,7 +270,7 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/pending" class="nav-link">
+                                        <a href="{{route('admin.deposit.deposit-pending')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Pending Deposit</span>
 
@@ -278,14 +278,14 @@
                                     </li>
 
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/approved" class="nav-link">
+                                        <a href="{{route('admin.deposit.deposit-approve')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Approved Deposit</span>
                                         </a>
                                     </li>
 
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/rejected" class="nav-link">
+                                        <a href="{{route('admin.deposit.deposit-reject')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Rejected Deposit</span>
                                         </a>
@@ -297,7 +297,7 @@
                                 </ul>
                             </div>
                         </li>
-   <li class="sidebar-menu-item sidebar-dropdown">
+                     <li class="sidebar-menu-item sidebar-dropdown">
                             <a href="javascript:void(0)" class="">
                                 <i class="menu-icon la la-bank"></i>
                                 <span class="menu-title">Profit Summary </span>
@@ -305,21 +305,21 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/pending" class="nav-link">
-                                            <i class="menu-icon las la-dot-circle"></i>
-                                            <span class="menu-title">Staking Income</span>
-
-                                        </a>
-                                    </li>
-
-                                    <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/approved" class="nav-link">
+                                        <a href="{{route('admin.bonus.direct-income')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Direct Income</span>
+
                                         </a>
                                     </li>
 
                                     <li class="sidebar-menu-item  ">
+                                        <a href="{{route('admin.bonus.level-income')}}" class="nav-link">
+                                            <i class="menu-icon las la-dot-circle"></i>
+                                            <span class="menu-title">Level Income</span>
+                                        </a>
+                                    </li>
+
+                                    <!-- <li class="sidebar-menu-item  ">
                                         <a href="http://localhost/p2pexchange/admin/withdraw/rejected" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Level Income</span>
@@ -331,7 +331,7 @@
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Roi Income</span>
                                         </a>
-                                    </li>
+                                    </li> -->
 
 
                                 </ul>
@@ -345,7 +345,7 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/pending" class="nav-link">
+                                        <a href="{{route('admin.withdraw.pending-withdraw')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Pending Withdrawals</span>
 
@@ -353,14 +353,14 @@
                                     </li>
 
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/approved" class="nav-link">
+                                        <a href="{{route('admin.withdraw.approve-withdraw')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Approved Withdrawals</span>
                                         </a>
                                     </li>
 
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/withdraw/rejected" class="nav-link">
+                                        <a href="{{route('admin.withdraw.reject-withdraw')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Rejected Withdrawals</span>
                                         </a>
@@ -386,25 +386,25 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/ticket/pending" class="nav-link">
+                                        <a href="{{route('admin.ticket.reply')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
-                                            <span class="menu-title">Pending Ticket</span>
+                                            <span class="menu-title">Reply Ticket</span>
                                         </a>
                                     </li>
-                                    <li class="sidebar-menu-item  ">
+                                    <!-- <li class="sidebar-menu-item  ">
                                         <a href="http://localhost/p2pexchange/admin/ticket/closed" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Closed Ticket</span>
                                         </a>
-                                    </li>
-                                    <li class="sidebar-menu-item  ">
+                                    </li> -->
+                                    <!-- <li class="sidebar-menu-item  ">
                                         <a href="http://localhost/p2pexchange/admin/ticket/answered" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Answered Ticket</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="sidebar-menu-item  ">
-                                        <a href="http://localhost/p2pexchange/admin/ticket" class="nav-link">
+                                        <a href="{{route('admin.ticket.tickets')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">All Ticket</span>
                                         </a>
@@ -422,21 +422,21 @@
                     <div class="sidebar-submenu  ">
                         <ul>
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/report/transaction" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/report/transaction" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Transaction Log</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/report/login/history" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/report/login/history" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Login History</span>
                                 </a>
                             </li>
 
                             <li class="sidebar-menu-item ">
-                                <a href="../admin/report/notification/history" class="nav-link">
+                                <a href="http://localhost/p2pexchange/admin/usersadmin/report/notification/history" class="nav-link">
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">Notification History</span>
                                 </a>
@@ -766,7 +766,7 @@
                         </li>
 
                         <li class="sidebar-menu-item  ">
-                            <a href="http://localhost/p2pexchange/admin/request-report" class="nav-link"
+                            <a href="{{route('admin.logout')}}" class="nav-link"
                                 data-default-url="http://localhost/p2pexchange/admin/request-report">
                                 <i class="menu-icon las la-bug"></i>
                                 <span class="menu-title">Logout </span>

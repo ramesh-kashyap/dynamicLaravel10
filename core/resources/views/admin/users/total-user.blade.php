@@ -5,7 +5,7 @@
     <div class="bodywrapper__inner">
 
         <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
-            <h6 class="page-title">Banned Users</h6>
+            <h6 class="page-title">Total Users</h6>
             <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
                 <form action="" method="GET" class="d-flex flex-wrap gap-2">
                     <div class="input-group w-auto flex-fill">
@@ -24,11 +24,14 @@
                             <table class="table table--light style--two">
                                 <thead>
                                     <tr>
-                                        <th>User</th>
-                                        <th>Email-Phone</th>
-                                        <th>Country</th>
+                                        <th>Sr no</th>
+                                        <th>User Name</th>
+                                        <th>User Id</th>
+                                        <th>Email Id</th>
+                                        <th>Mobile</th>
                                         <th>Joined On</th>
-                                        <th>Action</th>
+                                        <th>Activatation Date</th>
+                                        <th>Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>

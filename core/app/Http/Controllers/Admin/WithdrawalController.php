@@ -14,19 +14,23 @@ class WithdrawalController extends Controller
 {
   
 
-     public function log()
+     public function pending_withdraw()
     {
-        $this->data['page'] = 'admin.withdraw.withdrawals';
+        $this->data['page'] = 'admin.withdraw.pending-withdraw';
         return $this->admin_dashboard();
     }
-
-    public function details()
+  public function approve_withdraw()
     {
-        $this->data['page'] = 'admin.withdraw.detail';
+        $this->data['page'] = 'admin.withdraw.approved-withdraw';
         return $this->admin_dashboard();
-
-        
     }
+      public function reject_withdraw()
+    {
+        $this->data['page'] = 'admin.withdraw.rejected-withdraw';
+        return $this->admin_dashboard();
+    }
+   
+    
 
    
 }

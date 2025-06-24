@@ -48,7 +48,12 @@ Route::middleware('admin')->group(function () {
     Route::controller('ManageUsersController')->name('users.')->prefix('users')->group(function () {
         Route::get('/', 'allUsers')->name('all');
         Route::get('active', 'activeUsers')->name('active');
-        Route::get('banned', 'bannedUsers')->name('banned');
+        Route::get('pending', 'pendingUsers')->name('pending');
+        Route::get('block-user', 'blockUsers')->name('block-user');
+        Route::get('edit-user', 'editUsers')->name('edit-user');
+        Route::get('total-user', 'totalUsers')->name('total-user');
+
+
         Route::get('email-verified', 'emailVerifiedUsers')->name('email.verified');
         Route::get('email-unverified', 'emailUnverifiedUsers')->name('email.unverified');
         Route::get('mobile-unverified', 'mobileUnverifiedUsers')->name('mobile.unverified');
@@ -147,21 +152,32 @@ Route::middleware('admin')->group(function () {
 
     // DEPOSIT SYSTEM
     Route::controller('DepositController')->prefix('deposit')->name('deposit.')->group(function(){
-        Route::get('/', 'deposit')->name('list');
+        Route::get('/deposit-approve', 'deposit_approve')->name('deposit-approve');
+        Route::get('/deposit-reject', 'deposit_reject')->name('deposit-reject');
+        Route::get('/deposit-pending', 'deposit_pending')->name('deposit-pending');
       
     });
+
+     // Bonus SYSTEM
+    Route::controller('BonusController')->prefix('bonus')->name('bonus.')->group(function(){
+        Route::get('/direct-income', 'direct_income')->name('direct-income');
+        Route::get('/level-income', 'level_income')->name('level-income');
+
+      
+    });
+
 
     // WITHDRAW SYSTEM
     Route::name('withdraw.')->prefix('withdraw')->group(function () {
 
         Route::controller('WithdrawalController')->group(function () {
-            Route::get('pending', 'pending')->name('pending');
-            Route::get('approved', 'approved')->name('approved');
-            Route::get('rejected', 'rejected')->name('rejected');
-            Route::get('log', 'log')->name('log');
-            Route::get('details/{id}', 'details')->name('details'); 
-            Route::post('approve', 'approve')->name('approve');
-            Route::post('reject', 'reject')->name('reject');
+            Route::get('pending-withdraw', 'pending_withdraw')->name('pending-withdraw');
+            Route::get('approve-withdraw', 'approve_withdraw')->name('approve-withdraw');
+            Route::get('reject-withdraw', 'reject_withdraw')->name('reject-withdraw');
+            // Route::get('log', 'log')->name('log');
+            // Route::get('details/{id}', 'details')->name('details'); 
+            // Route::post('approve', 'approve')->name('approve');
+            // Route::post('reject', 'reject')->name('reject');
         });
     });
 
@@ -176,12 +192,16 @@ Route::middleware('admin')->group(function () {
 
     // Admin Support
     Route::controller('SupportTicketController')->prefix('ticket')->name('ticket.')->group(function(){
-        Route::get('/', 'tickets')->name('index');
-        Route::get('pending', 'pendingTicket')->name('pending');
+        Route::get('/', 'index')->name('reply');
+        Route::get('tickets', 'tickets')->name('tickets');
+
+
         Route::get('closed', 'closedTicket')->name('closed');
+
+
         Route::get('answered', 'answeredTicket')->name('answered');
         Route::get('view/{id}', 'ticketReply')->name('view');
-        Route::post('reply/{id}', 'replyTicket')->name('reply');
+        // Route::post('reply/{id}', 'replyTicket')->name('reply');
         Route::post('close/{id}', 'closeTicket')->name('close');
         Route::get('download/{ticket}', 'ticketDownload')->name('download');
         Route::post('delete/{id}', 'ticketDelete')->name('delete');

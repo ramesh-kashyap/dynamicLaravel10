@@ -11,15 +11,15 @@ class GeneralSettingController extends Controller
 {
    
     public function logoIcon()
-
-       public function index()
-    {
-
+{
+      
      $this->data['page'] = 'admin.setting.logo_icon';
      return $this->admin_dashboard();
 
     }
-     
+      public function index()
+    {
+
         $this->data['page'] = 'admin.setting.general';
         return $this->admin_dashboard();
     }
