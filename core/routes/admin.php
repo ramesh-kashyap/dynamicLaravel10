@@ -77,8 +77,8 @@ Route::middleware('admin')->group(function () {
       Route::controller('SubscriberController')->prefix('subscriber')->name('subscriber.')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('send-email', 'sendEmailForm')->name('send.email');
-        Route::post('remove/{id}', 'remove')->name('remove');
-        Route::post('send-email', 'sendEmail')->name('send.email');
+        // Route::post('remove/{id}', 'remove')->name('remove');
+        // Route::post('send-email', 'sendEmail')->name('send.email');
     });
     
 
@@ -86,17 +86,15 @@ Route::middleware('admin')->group(function () {
     Route::controller('CryptoCurrencyController')->group(function () {
         Route::name('crypto.')->prefix('crypto-currencies')->group(function () {
             Route::get('/', 'index')->name('index');
-            Route::get('add-new', 'add')->name('add');
-            Route::get('edit/{id}', 'edit')->name('edit');
-            Route::post('store/{id?}', 'store')->name('store');
-            Route::post('status/{id}', 'updateStatus')->name('status');
+            Route::get('form', 'form')->name('form');
+   
         });
     });
 
     //Fiat Currency
     Route::controller('FiatCurrencyController')->name('fiat.currency.')->prefix('fiat-currencies')->group(function () {
         Route::get('/', 'index')->name('index');
-        Route::post('store/{id?}', 'store')->name('store');
+        // Route::post('store/{id?}', 'store')->name('store');
     });
 
     Route::controller('FiatGatewayController')->name('fiat.gateway.')->prefix('fiat-gateways')->group(function () {
@@ -107,8 +105,7 @@ Route::middleware('admin')->group(function () {
     //Payment Window
     Route::controller('PaymentWindowController')->name('window.')->prefix('payment-window')->group(function () {
         Route::get('/', 'index')->name('index');
-        Route::post('store/{id?}', 'store')->name('store');
-        Route::post('remove/{id}', 'remove')->name('remove');
+       
     });
 
     // Referral
@@ -120,15 +117,15 @@ Route::middleware('admin')->group(function () {
 
     // Advertisement Manager
     Route::controller('ManageAdvertisementController')->name('ad.')->prefix('advertisement')->group(function () {
-        Route::get('/', 'index')->name('index');
-        Route::post('status/{id}', 'updateStatus')->name('status');
+        Route::get('/advertisement', 'index')->name('advertisement');
+        Route::get('/limit', 'advertisement')->name('limit');
+        // Route::post('status/{id}', 'updateStatus')->name('status');
     });
 
     // Advertisement Limit
     Route::controller('AdvertisementLimitController')->name('ad.limit.')->prefix('limit')->group(function () {
         Route::get('/', 'index')->name('index');
-        Route::post('store/{id?}', 'store')->name('store');
-        Route::post('remove/{id}', 'remove')->name('remove');
+       
     });
 
     // Trade Manager
@@ -151,9 +148,7 @@ Route::middleware('admin')->group(function () {
     // DEPOSIT SYSTEM
     Route::controller('DepositController')->prefix('deposit')->name('deposit.')->group(function(){
         Route::get('/', 'deposit')->name('list');
-        Route::get('details/{id}', 'details')->name('details');
-        Route::post('reject', 'reject')->name('reject');
-        Route::post('approve/{id}', 'approve')->name('approve');
+      
     });
 
     // WITHDRAW SYSTEM
