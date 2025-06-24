@@ -50,6 +50,12 @@ class LoginController extends Controller
         $pageTitle = "Admin Login";
         return view('admin.auth.login', compact('pageTitle'));
     }
+
+
+     protected function guard()
+    {
+        return auth()->guard('admin');
+    }
     public function login(Request $request)
     {
         $request->validate([
@@ -68,11 +74,11 @@ class LoginController extends Controller
 
   
 
-    public function admin_sign_out()
+ public function logout()
     {
-         Auth::guard('admin')->logout();
+        Auth::guard('admin')->logout();
          $notify[] = ['success', 'Admin Logout successfully'];
-        return redirect()->route('admin.admin-login')->withNotify($notify);
+        return redirect()->route('login')->withNotify($notify);
 
     }
 
