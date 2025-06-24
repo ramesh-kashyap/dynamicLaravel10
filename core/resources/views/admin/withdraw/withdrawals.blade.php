@@ -1,7 +1,28 @@
-@extends('admin.layouts.app')
 
-@section('panel')
-    <div class="row justify-content-center">
+@include('layouts.admin.header')
+
+        <div class="body-wrapper">
+            <div class="bodywrapper__inner">
+
+                <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
+    <h6 class="page-title">Pending Withdrawals</h6>
+    <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
+            <form action="" method="GET" class="d-flex flex-wrap gap-2">
+            <div class="input-group w-auto flex-fill">
+    <input type="search" name="search" class="form-control bg--white" placeholder="Search..." value="">
+    <button class="btn btn--primary" type="submit"><i class="la la-search"></i></button>
+</div>
+                <div class="input-group w-auto flex-fill">
+    <input name="date" type="search" data-range="true" data-multiple-dates-separator=" - " data-language="en" data-format="Y-m-d" class="datepicker-here form-control bg--white pe-2" data-position='bottom right' placeholder="Start Date - End Date" autocomplete="off" value="">
+    <button class="btn btn--primary input-group-text"><i class="la la-search"></i></button>
+</div>
+
+
+    </form>
+    </div>
+</div>
+
+                    <div class="row justify-content-center">
         <div class="col-lg-12">
             <div class="card b-radius--10 ">
                 <div class="card-body p-0">
@@ -9,69 +30,30 @@
                         <table class="table table--light style--two">
                             <thead>
                                 <tr>
-                                    <th>@lang('Initiated')</th>
-                                    <th>@lang('Transaction ID')</th>
-                                    <th>@lang('User')</th>
-                                    <th>@lang('Amount')</th>
-                                    <th>@lang('Status')</th>
-                                    <th>@lang('Action')</th>
+                                    <th>Initiated</th>
+                                    <th>Transaction ID</th>
+                                    <th>User</th>
+                                    <th>Amount</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @forelse($withdrawals as $withdraw)
-                                    <tr>
-                                        <td>
-                                            {{ showDateTime($withdraw->created_at) }} <br> {{ diffForHumans($withdraw->created_at) }}
-                                        </td>
-
-                                        <td>
-                                            {{ $withdraw->trx }}
-                                        </td>
-
-                                        <td>
-                                            <span>{{ $withdraw->user->fullname }}</span>
-                                            <br>
-                                            <span class="small"> <a href="{{ appendQuery('search', @$withdraw->user->username) }}"><span>@</span>{{ $withdraw->user->username }}</a> </span>
-                                        </td>
-
-                                        <td>
-                                            {{ showAmount($withdraw->amount, 8) }} {{ __($withdraw->crypto->code) }} - <span class="text-danger" title="@lang('charge')">{{ showAmount($withdraw->charge, 8) }} {{ __($withdraw->crypto->code) }}</span>
-                                            <br>
-                                            <strong title="@lang('Amount after charge')">
-                                                {{ showAmount($withdraw->amount - $withdraw->charge, 8) }} {{ __($withdraw->crypto->code) }}
-                                            </strong>
-                                        </td>
-
-                                        <td>
-                                            @php echo $withdraw->statusBadge @endphp
-                                        </td>
-
-                                        <td>
-                                            <a href="{{ route('admin.withdraw.details', $withdraw->id) }}" class="btn btn-sm btn-outline--primary ms-1">
-                                                <i class="la la-desktop"></i> @lang('Details')
-                                            </a>
-                                        </td>
+                                                                    <tr>
+                                        <td class="text-muted text-center" colspan="100%">Data not found</td>
                                     </tr>
-                                @empty
-                                    <tr>
-                                        <td class="text-muted text-center" colspan="100%">{{ __($emptyMessage) }}</td>
-                                    </tr>
-                                @endforelse
-                            </tbody>
+                                                            </tbody>
                         </table><!-- table end -->
                     </div>
                 </div>
 
-                @if ($withdrawals->hasPages())
-                    <div class="card-footer py-4">
-                        {{ paginateLinks($withdrawals) }}
-                    </div>
-                @endif
-            </div><!-- card end -->
+                            </div><!-- card end -->
         </div>
     </div>
-@endsection
 
-@push('breadcrumb-plugins')
-    <x-search-form dateSearch='yes' />
-@endpush
+
+            </div><!-- bodywrapper__inner end -->
+        </div><!-- body-wrapper end -->
+    </div>
+
+@include('layouts.admin.footer')

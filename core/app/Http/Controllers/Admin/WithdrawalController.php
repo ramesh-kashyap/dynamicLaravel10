@@ -20,7 +20,7 @@ class WithdrawalController extends Controller
         return view('admin.withdraw.withdrawals');
     }
 
-    public function details($id)
+    public function details()
     {
         
         return view('admin.withdraw.detail');
