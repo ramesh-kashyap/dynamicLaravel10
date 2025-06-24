@@ -18,6 +18,14 @@ class ManageUsersController extends Controller
 
     }
 
+    public function allUsers()
+    {
+        
+
+         $this->data['page'] = 'admin.users.list';
+     return $this->admin_dashboard();
+    }
+
   public function bannedUsers()
     {
      $this->data['page'] = 'admin.users.list';
