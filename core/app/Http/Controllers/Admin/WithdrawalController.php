@@ -14,16 +14,18 @@ class WithdrawalController extends Controller
 {
   
 
-    public function log()
+     public function log()
     {
-        
-        return view('admin.withdraw.withdrawals');
+        $this->data['page'] = 'admin.withdraw.withdrawals';
+        return $this->admin_dashboard();
     }
 
     public function details()
     {
+        $this->data['page'] = 'admin.withdraw.detail';
+        return $this->admin_dashboard();
+
         
-        return view('admin.withdraw.detail');
     }
 
    

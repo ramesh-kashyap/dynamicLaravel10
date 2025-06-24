@@ -9,9 +9,17 @@ use App\Models\Frontend;
 
 class GeneralSettingController extends Controller
 {
-    public function index()
-    {
 
-        return view('admin.setting.general');
-    }  
+       public function index()
+    {
+        $this->data['page'] = 'admin.setting.general';
+        return $this->admin_dashboard();
+    }
+
+    
+      public function apiIndex()
+    {
+        $this->data['page'] = 'admin.setting.api_setting';
+        return $this->admin_dashboard();
+    }
 }

@@ -7,12 +7,13 @@ use App\Http\Controllers\Controller;
 
 class DepositController extends Controller
 {
-    public function deposit()
+
+      public function deposit()
     {
-
-
-        return view('admin.deposit.log');
+        $this->data['page'] = 'admin.deposit.log';
+        return $this->admin_dashboard();
     }
+
 
   
 }

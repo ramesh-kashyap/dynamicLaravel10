@@ -666,4 +666,4 @@
     </div><!-- bodywrapper__inner end -->
 </div><!-- body-wrapper end -->
 </div>
-@include('layouts.admin.header')
+@include('layouts.admin.footer')

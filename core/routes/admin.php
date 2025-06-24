@@ -208,7 +208,7 @@ Route::middleware('admin')->group(function () {
 
         //configuration
         Route::get('setting/system-configuration', 'systemConfiguration')->name('setting.system.configuration');
-        Route::post('setting/system-configuration', 'systemConfigurationSubmit');
+        // Route::post('setting/system-configuration', 'systemConfigurationSubmit');
 
         // Logo-Icon
         Route::get('setting/logo-icon', 'logoIcon')->name('setting.logo.icon');
