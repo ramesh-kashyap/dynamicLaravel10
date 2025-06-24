@@ -8,9 +8,8 @@ use App\Models\User;
 use App\Models\Withdraw;
 
 class AdminController extends Controller
-{
-   
-   public function dashboard()
+{    
+        public function dashboard()
     {
       
      $this->data['page'] = 'admin.dashboard';

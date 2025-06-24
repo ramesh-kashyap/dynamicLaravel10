@@ -13,22 +13,33 @@ class ManageUsersController extends Controller
    public function activeUsers()
     {
      
-     $this->data['page'] = 'admin.users.list';
+     $this->data['page'] = 'admin.users.active-user';
      return $this->admin_dashboard();
 
     }
 
-    public function allUsers()
+  public function pendingUsers()
     {
-        
-
-         $this->data['page'] = 'admin.users.list';
+     $this->data['page'] = 'admin.users.pending-user';
      return $this->admin_dashboard();
+
+    }
+     public function blockUsers()
+    {
+     $this->data['page'] = 'admin.users.block-user';
+     return $this->admin_dashboard();
+
     }
 
-  public function bannedUsers()
+     public function totalUsers()
     {
-     $this->data['page'] = 'admin.users.list';
+     $this->data['page'] = 'admin.users.total-user';
+     return $this->admin_dashboard();
+
+    }
+  public function editUsers()
+    {
+     $this->data['page'] = 'admin.users.edit-user';
      return $this->admin_dashboard();
 
     }
