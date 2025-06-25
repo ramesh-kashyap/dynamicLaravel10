@@ -1,11 +1,10 @@
 @include('layouts.admin.header')
 <style>
     .table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-    </style>
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
 <div class="body-wrapper">
     <div class="bodywrapper__inner">
 
@@ -31,7 +30,7 @@
             <div class="col-md-12">
                 <div class="card b-radius--10">
                     <div class="card-body p-0">
-<div class="table-responsive">
+                        <div class="table-responsive">
                             <table class="table table--light style--two">
                                 <thead>
                                     <tr>
@@ -46,37 +45,22 @@
                                         <th>Status</th>
                                     </tr>
                                 </thead>
-                                    <tbody>
+                                <tbody>
+
+
+                                    @foreach($deposit_list as $value)
                                     <tr>
-                                         <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            <span>Raj Kashyap</span>
-                                           
-                                        </td>
-                                         <td>
-                                            www101
-                                        </td>
-
-                                        <td>
-                                            100
-                                        </td>
-                                       
-
-                                        <td>
-                                            2024-04-24 11:59 AM <br> 1 year ago
-                                        </td>
-                                         <td>
-                                            <span title="India">ruefjdsf22</span>
-                                        </td>
-                                         <td>
-                                            <span title="India">Pending</span>
-                                        </td>
+                                        <td>{{$value->plan}}</td>
+                                        <td>{{$value->user_id_fk}}</td>
+                                        <td> {{$value->amount}}</td>
+                                        <td>{{$value->created_at}}</td>
+                                        <td>{{$value->transaction_id}}</td>
+                                        <td>{{($value->user->active_status=="Pending")?"Activation":"Renewal";}}</td>
 
                                     </tr>
-                                   
-                              
+
+
+                                    @endforeach
 
                                 </tbody>
                                 <tbody>
