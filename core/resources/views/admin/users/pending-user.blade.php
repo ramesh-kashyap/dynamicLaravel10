@@ -1,16 +1,15 @@
 @include('layouts.admin.header')
 <style>
     .table-responsive {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-    </style>
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
 <div class="body-wrapper">
     <div class="bodywrapper__inner">
 
         <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
-            <h6 class="page-title">Pending Deposit </h6>
+            <h6 class="page-title">Pending User </h6>
             <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
                 <form action="" method="GET" class="d-flex flex-wrap gap-2">
                     <div class="input-group w-auto flex-fill">
@@ -28,72 +27,62 @@
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <div class="card b-radius--10">
                     <div class="card-body p-0">
-<div class="table-responsive">
+                        <div class="table-responsive">
                             <table class="table table--light style--two">
                                 <thead>
                                     <tr>
                                         <th>S NO.</th>
                                         <th>User Name</th>
                                         <th>User Id</th>
-                                        <th>Amount</th>
-                                        <th>Transaction Date.</th>
+                                        <th>Email ID</th>
 
-                                        <th>Transaction ID</th>
-
+                                        <!-- <th>Mobile No.</th> -->
+                                        <!--<th>Rank</th>-->
+                                        <th>Joining Date</th>
+                                        <!-- <th>Activation Date</th> -->
                                         <th>Status</th>
                                     </tr>
                                 </thead>
-                                    <tbody>
-                                    <tr>
-                                         <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            <span>Raj Kashyap</span>
-                                           
-                                        </td>
-                                         <td>
-                                            www101
-                                        </td>
-
-                                        <td>
-                                            100
-                                        </td>
-                                       
-
-                                        <td>
-                                            2024-04-24 11:59 AM <br> 1 year ago
-                                        </td>
-                                         <td>
-                                            <span title="India">ruefjdsf22</span>
-                                        </td>
-                                         <td>
-                                            <span title="India">Pending</span>
-                                        </td>
-
-                                    </tr>
-                                   
-                              
-
-                                </tbody>
                                 <tbody>
+                                    @php
+                                    $sr = ($deposit_list->currentPage() - 1) * $deposit_list->perPage() + 1;
+                                    @endphp
+
+                                    @forelse($deposit_list as $value)
+                                    <tr>
+                                        <td>{{ $sr++ }}</td>
+                                        <td>{{ $value->name ?? 'N/A' }}</td>
+                                        <td>{{ $value->username }}</td>
+                                        <td>{{ $value->email }}</td>
+                                        <!-- <td>{{ $value->phone }}</td> -->
+                                        <td>{{ $value->jdate }}</td>
+                                        <!-- <td>{{ $value->adate }}</td> -->
+                                        <td>
+                                            {{ $value->active_status == 'Pending' ? 'Activation' : 'Renewal' }}
+                                        </td>
+                                    </tr>
+                                    @empty
                                     <tr>
                                         <td class="text-muted text-center" colspan="100%">Data not found</td>
                                     </tr>
+                                    @endforelse
                                 </tbody>
-                            </table><!-- table end -->
+                            </table>
                         </div>
                     </div>
+                </div>
 
-                </div><!-- card end -->
+                <div class="custom-pagination text-center mt-4">
+                    {{ $deposit_list->onEachSide(1)->links('pagination::bootstrap-4') }}
+                </div>
+
             </div>
         </div>
-
-
-    </div><!-- bodywrapper__inner end -->
-</div><!-- body-wrapper end -->
+    </div>
 </div>
+
+
 @include('layouts.admin.footer')

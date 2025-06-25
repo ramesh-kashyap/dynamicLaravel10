@@ -138,12 +138,12 @@
                                             <span class="menu-title">Total Users</span>
                                         </a>
                                     </li>
-                                    <li class="sidebar-menu-item  ">
+                                    <!-- <li class="sidebar-menu-item  ">
                                         <a href="{{route('admin.users.edit-user')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>
                                             <span class="menu-title">Edit Users</span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="sidebar-menu-item  ">
                                         <a href="{{route('admin.users.block-user')}}" class="nav-link">
                                             <i class="menu-icon las la-dot-circle"></i>

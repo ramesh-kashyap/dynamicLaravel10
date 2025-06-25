@@ -48,4 +48,4 @@
 </div>
 
 
-@include('layouts.admin.header')
+@include('layouts.admin.footer')
