@@ -47,15 +47,13 @@
                                     </tr>
                                 </thead>
                                     <tbody>
-                                                              <?php if(is_array($deposit_list) || is_object($deposit_list)){ ?>
 
-                                                <?php $cnt = $deposit_list->perPage() * ($deposit_list->currentPage() - 1); ?>
+                                               
                                                  @foreach($deposit_list as $value)
                                     <tr>
-                                        <td><?= $cnt += 1?></td>
-                                                      <td>{{$value->user->name}}</td>
+                                                      <td>{{$value->plan}}</td>
                                                       <td>{{$value->user_id_fk}}</td>
-                                                      <td>{{currency()}} {{$value->amount}}</td>
+                                                      <td> {{$value->amount}}</td>
                                                       <td>{{$value->created_at}}</td>
                                                       <td>{{$value->transaction_id}}</td>
                                                       <td>{{($value->user->active_status=="Pending")?"Activation":"Renewal";}}</td>
@@ -65,7 +63,6 @@
                               
   @endforeach
                 
-                                             <?php }?>
                                 </tbody>
                                 <tbody>
                                     <tr>
