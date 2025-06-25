@@ -47,11 +47,11 @@
                                     </tr>
                                 </thead>
                                     <tbody>
+                                                              <?php if(is_array($deposit_list) || is_object($deposit_list)){ ?>
 
-                                               
                                                  @foreach($deposit_list as $value)
                                     <tr>
-                                                      <td>{{$value->plan}}</td>
+                                                      <td>{{$value->user->name}}</td>
                                                       <td>{{$value->user_id_fk}}</td>
                                                       <td> {{$value->amount}}</td>
                                                       <td>{{$value->created_at}}</td>
@@ -63,6 +63,7 @@
                               
   @endforeach
                 
+                                             <?php }?>
                                 </tbody>
                                 <tbody>
                                     <tr>
