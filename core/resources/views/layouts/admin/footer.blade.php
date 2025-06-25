@@ -1,17 +1,17 @@
 
 
-   <script src="http://localhost/dynamicLaravel10/assets/global/js/jquery-3.6.0.min.js"></script>
+  <script src="http://localhost/dynamicLaravel10/assets/global/js/jquery-3.6.0.min.js"></script>
     <script src="http://localhost/dynamicLaravel10/assets/global/js/bootstrap.bundle.min.js"></script>
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/bootstrap-toggle.min.js"></script>
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/jquery.slimscroll.min.js"></script>
 
 
     <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/iziToast.min.css">
-<script src="http://localhost/dynamicLaravel10/assets/global/js/iziToast.min.js"></script>
+<script src="http://localhost/p2pe                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              xchange/assets/global/js/iziToast.min.js"></script>
 
 
 
-<script>
+<script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     "use strict";
 
     function notify(status, message) {
@@ -31,7 +31,9 @@
     }
 </script>
     
-          
+         <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/datepicker.min.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/datepicker.en.js"></script>
+
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/nicEdit.js"></script>
 
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/select2.min.js"></script>
@@ -76,8 +78,8 @@
             });
         });
     </script>
-    <script src="../admin/users/assets/admin/js/vendor/apexcharts.min.js"></script>
-    <script src="../admin/users/assets/admin/js/vendor/chart.js.2.8.0.js"></script>
+    <script src="http://localhost/dynamicLaravel10/admin/users/assets/admin/js/vendor/apexcharts.min.js"></script>
+    <script src="http://localhost/dynamicLaravel10/admin/users/assets/admin/js/vendor/chart.js.2.8.0.js"></script>
     <script>
         "use strict";
 

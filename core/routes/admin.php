@@ -115,9 +115,9 @@ Route::middleware('admin')->group(function () {
 
     // Referral
     Route::controller('ReferralController')->name('referral.')->prefix('referral')->group(function () {
-        Route::get('/', 'index')->name('index');
-        Route::post('store', 'store')->name('store');
-        Route::get('status/update/{type}', 'updateStatus')->name('status.update');
+        Route::get('/referral', 'index')->name('referral');
+        // Route::post('store', 'store')->name('store');
+        // Route::get('status/update/{type}', 'updateStatus')->name('status.update');
     });
 
     // Advertisement Manager
@@ -300,7 +300,7 @@ Route::middleware('admin')->group(function () {
 
     //Cron Configuration
     Route::controller('CronConfigurationController')->name('cron.')->prefix('cron')->group(function () {
-        Route::get('index', 'cronJobs')->name('index');
+        Route::get('cron-jobs', 'cronJobs')->name('cron-jobs');
         Route::post('store', 'cronJobStore')->name('store');
         Route::post('update', 'cronJobUpdate')->name('update');
         Route::post('delete/{id}', 'cronJobDelete')->name('delete');
