@@ -1,5 +1,11 @@
 @include('layouts.admin.header')
+<style>
+    .table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
+    </style>
 <div class="body-wrapper">
     <div class="bodywrapper__inner">
 
@@ -25,7 +31,7 @@
             <div class="col-md-12">
                 <div class="card b-radius--10">
                     <div class="card-body p-0">
-                        <div class="table-responsive--sm table-responsive">
+<div class="table-responsive">
                             <table class="table table--light style--two">
                                 <thead>
                                     <tr>
@@ -33,7 +39,7 @@
                                         <th>User Name</th>
                                         <th>User Id</th>
                                         <th>Amount</th>
-                                        <th>Transaction Date.</th>
+                                        <th>Created At</th>
 
                                         <th>Transaction ID</th>
 
@@ -41,68 +47,25 @@
                                     </tr>
                                 </thead>
                                     <tbody>
+                                                              <?php if(is_array($deposit_list) || is_object($deposit_list)){ ?>
+
+                                                <?php $cnt = $deposit_list->perPage() * ($deposit_list->currentPage() - 1); ?>
+                                                 @foreach($deposit_list as $value)
                                     <tr>
-                                         <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            <span>Raj Kashyap</span>
-                                            <br>
-                                            <span class="small">
-                                                <a href="http://localhost/p2pexchange/p2pexchange/admin/users/detail/4"><span>@</span>rajksp</a>
-                                            </span>
-                                        </td>
-
-                                        <td>
-                                            rajksp@gmail.com<br>918034561772
-                                        </td>
-                                        <td>
-                                            <span title="India">IN</span>
-                                        </td>
-
-                                        <td>
-                                            2024-04-24 11:59 AM <br> 1 year ago
-                                        </td>
-                                        <td>
-                                            <div class="button--group">
-                                                <a href="http://localhost/p2pexchange/p2pexchange/admin/users/detail/4" class="btn btn-sm btn-outline--primary">
-                                                    <i class="las la-desktop"></i> Details </a>
-                                            </div>
-                                        </td>
+                                        <td><?= $cnt += 1?></td>
+                                                      <td>{{$value->user->name}}</td>
+                                                      <td>{{$value->user_id_fk}}</td>
+                                                      <td>{{currency()}} {{$value->amount}}</td>
+                                                      <td>{{$value->created_at}}</td>
+                                                      <td>{{$value->transaction_id}}</td>
+                                                      <td>{{($value->user->active_status=="Pending")?"Activation":"Renewal";}}</td>
 
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            2
-                                        </td>
-                                        <td>
-                                            <span>Pawan Sehrawat</span>
-                                            <br>
-                                            <span class="small">
-                                                <a href="http://localhost/p2pexchange/p2pexchange/admin/users/detail/3"><span>@</span>pawan5335</a>
-                                            </span>
-                                        </td>
-
-                                        <td>
-                                            sehrawat.pawan5335@gmail.com<br>9109599649564
-                                        </td>
-                                        <td>
-                                            <span title="India">IN</span>
-                                        </td>
-
-                                        <td>
-                                            2024-04-21 01:42 PM <br> 1 year ago
-                                        </td>
-                                        <td>
-                                            <div class="button--group">
-                                                <a href="http://localhost/p2pexchange/p2pexchange/admin/users/detail/3" class="btn btn-sm btn-outline--primary">
-                                                    <i class="las la-desktop"></i> Details </a>
-                                            </div>
-                                        </td>
-
-                                    </tr>
+                                   
                               
-
+  @endforeach
+                
+                                             <?php }?>
                                 </tbody>
                                 <tbody>
                                     <tr>
