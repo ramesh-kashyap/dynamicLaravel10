@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMC P2P Exchange - Dashboard</title>
-   <link rel="shortcut icon" type="image/png" href="http://localhost/p2pexchange/assets/images/logoIcon/favicon.png">
+   <link rel="shortcut icon" type="image/png" href="http://localhost/dynamicLaravel10/assets/images/logoIcon/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/bootstrap-toggle.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/all.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/global/css/line-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/line-awesome.min.css">
 
-        <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/datepicker.min.css">
+        <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/datepicker.min.css">
 
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/vendor/select2.min.css">
-    <link rel="stylesheet" href="http://localhost/p2pexchange/assets/admin/css/app.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/select2.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/app.css">
 
     <style>
         .copyInput {
@@ -458,14 +458,14 @@
                         <li class="sidebar__menu-header">Settings</li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/general-setting" class="nav-link">
+                            <a href="{{route('admin.setting.index')}}" class="nav-link">
                                 <i class="menu-icon las la-life-ring"></i>
                                 <span class="menu-title">General Setting</span>
                             </a>
                         </li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/setting/system-configuration" class="nav-link">
+                            <a href="{{route('admin.cron.cron-jobs')}}" class="nav-link">
                                 <i class="menu-icon las la-cog"></i>
                                 <span class="menu-title">System Configuration</span>
                             </a>
@@ -473,21 +473,21 @@
 
 
                         <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/cron/index" class="nav-link">
+                            <a href="{{route('admin.cron.cron-jobs')}}" class="nav-link">
                                 <i class="menu-icon las la-clock"></i>
                                 <span class="menu-title">Cron Job Setting</span>
                             </a>
                         </li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/api-setting" class="nav-link">
+                            <a href="{{route('admin.api.index')}}" class="nav-link">
                                 <i class="menu-icon las la-cogs"></i>
                                 <span class="menu-title">Api Setting</span>
                             </a>
                         </li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/referral" class="nav-link ">
+                            <a href="{{route('admin.referral.referral')}}" class="nav-link ">
                                 <i class="menu-icon las la-sitemap"></i>
                                 <span class="menu-title">Referral Setting</span>
                             </a>
@@ -759,7 +759,7 @@
                         </li> -->
 
                         <li class="sidebar-menu-item ">
-                            <a href="http://localhost/p2pexchange/admin/custom-css" class="nav-link">
+                            <a href="{{route('admin.password')}}" class="nav-link">
                                 <i class="menu-icon lab la-css3-alt"></i>
                                 <span class="menu-title">Change Password</span>
                             </a>
@@ -767,7 +767,7 @@
 
                         <li class="sidebar-menu-item  ">
                             <a href="{{route('admin.logout')}}" class="nav-link"
-                                data-default-url="http://localhost/p2pexchange/admin/request-report">
+                              >
                                 <i class="menu-icon las la-bug"></i>
                                 <span class="menu-title">Logout </span>
                             </a>
@@ -831,13 +831,13 @@
                             </span>
                         </button>
                         <div class="dropdown-menu dropdown-menu--sm p-0 border-0 box--shadow1 dropdown-menu-right">
-                            <a href="http://localhost/p2pexchange/admin/profile"
+                            <a href="{{route('admin.profile')}}"
                                 class="dropdown-menu__item d-flex align-items-center px-3 py-2">
                                 <i class="dropdown-menu__icon las la-user-circle"></i>
                                 <span class="dropdown-menu__caption">Profile</span>
                             </a>
 
-                            <a href="http://localhost/p2pexchange/admin/password"
+                            <a href="{{route('admin.password')}}"
                                 class="dropdown-menu__item d-flex align-items-center px-3 py-2">
                                 <i class="dropdown-menu__icon las la-key"></i>
                                 <span class="dropdown-menu__caption">Password</span>

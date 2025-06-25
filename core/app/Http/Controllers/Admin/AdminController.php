@@ -16,4 +16,19 @@ class AdminController extends Controller
      return $this->admin_dashboard();
 
     }    
+        public function password()
+    {
+      
+     $this->data['page'] = 'admin.password';
+     return $this->admin_dashboard();
+
+    }    
+     public function profile()
+    {
+      
+     $this->data['page'] = 'admin.profile';
+     return $this->admin_dashboard();
+
+    }    
+   
 }

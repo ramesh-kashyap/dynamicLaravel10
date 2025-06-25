@@ -6,7 +6,7 @@
         <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
             <h6 class="page-title">Profile</h6>
             <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
-                <a href="http://localhost/p2pexchange/admin/password" class="btn btn-sm btn-outline--primary"><i class="las la-key"></i>Password Setting</a>
+                <a href="{{route('admin.password')}}" class="btn btn-sm btn-outline--primary"><i class="las la-key"></i>Password Setting</a>
             </div>
         </div>
 
@@ -92,4 +92,4 @@
 </div>
 
 
-@include('layouts.admin.header')
+@include('layouts.admin.footer')
