@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/bootstrap-toggle.min.css">
     <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/all.min.css">
     <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/line-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/line-awesome.min.css">
 
     
     <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/select2.min.css">
@@ -459,6 +463,7 @@
 
                         <li class="sidebar-menu-item ">
                             <a href="{{route('admin.setting.index')}}" class="nav-link">
+                            <a href="{{route('admin.setting.index')}}" class="nav-link">
                                 <i class="menu-icon las la-life-ring"></i>
                                 <span class="menu-title">General Setting</span>
                             </a>
@@ -480,6 +485,7 @@
                         </li>
 
                         <li class="sidebar-menu-item ">
+                            <a href="{{route('admin.api.index')}}" class="nav-link">
                             <a href="{{route('admin.api.index')}}" class="nav-link">
                                 <i class="menu-icon las la-cogs"></i>
                                 <span class="menu-title">Api Setting</span>

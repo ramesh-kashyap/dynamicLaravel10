@@ -11,7 +11,7 @@
 
 
 
-<script>
+<script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
     "use strict";
 
     function notify(status, message) {
@@ -34,6 +34,9 @@
           
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/nicEdit.js"></script>
 
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/select2.min.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/app.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/cu-modal.js"></script>
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/select2.min.js"></script>
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/app.js"></script>
     <script src="http://localhost/dynamicLaravel10/assets/admin/js/cu-modal.js"></script>
