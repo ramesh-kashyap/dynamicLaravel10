@@ -6,17 +6,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMC P2P Exchange - Dashboard</title>
-   <link rel="shortcut icon" type="image/png" href="../assets/images/logoIcon/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="http://localhost/dynamicLaravel10/assets/images/logoIcon/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/global/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/admin/css/vendor/bootstrap-toggle.min.css">
-    <link rel="stylesheet" href="../assets/global/css/all.min.css">
-    <link rel="stylesheet" href="../assets/global/css/line-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/all.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/line-awesome.min.css">
 
-        <link rel="stylesheet" href="../assets/admin/css/vendor/datepicker.min.css">
+    
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/vendor/select2.min.css">
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/admin/css/app.css">
 
-    <link rel="stylesheet" href="../assets/admin/css/vendor/select2.min.css">
-    <link rel="stylesheet" href="../assets/admin/css/app.css">
 
     <style>
         .copyInput {
@@ -86,7 +86,7 @@
             <button class="res-sidebar-close-btn"><i class="las la-times"></i></button>
             <div class="sidebar__inner">
                 <div class="sidebar__logo">
-                    <a href="{{route('admin.dashboard')}}" class="sidebar__main-logo"><img src="../assets/images/logoIcon/logo.png" alt="image"></a>
+                    <a href="{{route('admin.dashboard')}}" class="sidebar__main-logo"><img src="http://localhost/dynamicLaravel10/assets/images/logoIcon/logo.png" alt="image"></a>
                 </div>
 
                 <div class="sidebar__menu-wrapper" id="sidebar__menuWrapper">
@@ -458,14 +458,14 @@
                         <li class="sidebar__menu-header">Settings</li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="../admin/general-setting" class="nav-link">
+                            <a href="{{route('admin.setting.index')}}" class="nav-link">
                                 <i class="menu-icon las la-life-ring"></i>
                                 <span class="menu-title">General Setting</span>
                             </a>
                         </li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="../admin/setting/system-configuration" class="nav-link">
+                            <a href="{{route('admin.setting.system.configuration')}}" class="nav-link">
                                 <i class="menu-icon las la-cog"></i>
                                 <span class="menu-title">System Configuration</span>
                             </a>
@@ -473,14 +473,14 @@
 
 
                         <li class="sidebar-menu-item ">
-                            <a href="../admin/cron/index" class="nav-link">
+                            <a href="{{route('admin.cron.index')}}" class="nav-link">
                                 <i class="menu-icon las la-clock"></i>
                                 <span class="menu-title">Cron Job Setting</span>
                             </a>
                         </li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="../admin/api-setting" class="nav-link">
+                            <a href="{{route('admin.api.index')}}" class="nav-link">
                                 <i class="menu-icon las la-cogs"></i>
                                 <span class="menu-title">Api Setting</span>
                             </a>

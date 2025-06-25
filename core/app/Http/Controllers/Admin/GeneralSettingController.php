@@ -24,6 +24,13 @@ class GeneralSettingController extends Controller
         return $this->admin_dashboard();
     }
 
+     public function systemConfiguration()
+    {
+
+        $this->data['page'] = 'admin.setting.configuration';
+        return $this->admin_dashboard();
+    }
+
     
       public function apiIndex()
     {

@@ -1,13 +1,13 @@
 
 
-  <script src="../assets/global/js/jquery-3.6.0.min.js"></script>
-    <script src="../assets/global/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/admin/js/vendor/bootstrap-toggle.min.js"></script>
-    <script src="../assets/admin/js/vendor/jquery.slimscroll.min.js"></script>
+   <script src="http://localhost/dynamicLaravel10/assets/global/js/jquery-3.6.0.min.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/global/js/bootstrap.bundle.min.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/bootstrap-toggle.min.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/jquery.slimscroll.min.js"></script>
 
 
-    <link rel="stylesheet" href="../assets/global/css/iziToast.min.css">
-<script src="../assets/global/js/iziToast.min.js"></script>
+    <link rel="stylesheet" href="http://localhost/dynamicLaravel10/assets/global/css/iziToast.min.css">
+<script src="http://localhost/dynamicLaravel10/assets/global/js/iziToast.min.js"></script>
 
 
 
@@ -31,14 +31,12 @@
     }
 </script>
     
-         <script src="../assets/admin/js/vendor/datepicker.min.js"></script>
-    <script src="../assets/admin/js/vendor/datepicker.en.js"></script>
+          
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/nicEdit.js"></script>
 
-    <script src="../assets/admin/js/nicEdit.js"></script>
-
-    <script src="../assets/admin/js/vendor/select2.min.js"></script>
-    <script src="../assets/admin/js/app.js"></script>
-    <script src="../assets/admin/js/cu-modal.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/vendor/select2.min.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/app.js"></script>
+    <script src="http://localhost/dynamicLaravel10/assets/admin/js/cu-modal.js"></script>
     <script>
         "use strict";
         bkLib.onDomLoaded(function() {
