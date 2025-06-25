@@ -45,23 +45,24 @@
                                         <th>Status</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                    <tbody>
+                                                              <?php if(is_array($deposit_list) || is_object($deposit_list)){ ?>
 
-
-                                    @foreach($deposit_list as $value)
+                                                 @foreach($deposit_list as $value)
                                     <tr>
-                                        <td>{{$value->plan}}</td>
-                                        <td>{{$value->user_id_fk}}</td>
-                                        <td> {{$value->amount}}</td>
-                                        <td>{{$value->created_at}}</td>
-                                        <td>{{$value->transaction_id}}</td>
-                                        <td>{{($value->user->active_status=="Pending")?"Activation":"Renewal";}}</td>
+                                                      <td>{{$value->user->name}}</td>
+                                                      <td>{{$value->user_id_fk}}</td>
+                                                      <td> {{$value->amount}}</td>
+                                                      <td>{{$value->created_at}}</td>
+                                                      <td>{{$value->transaction_id}}</td>
+                                                      <td>{{($value->user->active_status=="Pending")?"Activation":"Renewal";}}</td>
 
                                     </tr>
-
-
-                                    @endforeach
-
+                                   
+                              
+  @endforeach
+                
+                                             <?php }?>
                                 </tbody>
                                 <tbody>
                                     <tr>

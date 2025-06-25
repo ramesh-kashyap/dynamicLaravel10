@@ -12,10 +12,9 @@ class DepositController extends Controller
     {
 
         // $limit = $request->limit ? $request->limit : paginationLimit();
-        // $status = $request->status ? $request->status : null;
-        // $search = $request->search ? $request->search : null;
+        $status = $request->status ? $request->status : null;
+        $search = $request->search ? $request->search : null;
         $notes = Investment::all();
-        dd($notes);
     //     if($search <> null && $request->reset!="Reset"){
     //         $notes = $notes->where(function($q) use($search){
     //           $q->Where('amount', 'LIKE', '%' . $search . '%')
@@ -25,14 +24,14 @@ class DepositController extends Controller
     //           ->orWhere('transaction_id', 'LIKE', '%' . $search . '%');
     //         });
 
-    //       }
+          }
     // $notes = $notes->paginate($limit)
     //     ->appends([
     //         'limit' => $limit
     //     ]);
 
         $this->data['deposit_list'] =  $notes;
-        // $this->data['search'] = $search;
+        $this->data['search'] = $search;
         $this->data['page'] = 'admin.deposit.pending-deposit';
         return $this->admin_dashboard();
     }
@@ -41,26 +40,32 @@ class DepositController extends Controller
     {
 
         // $limit = $request->limit ? $request->limit : paginationLimit();
-        // $status = $request->status ? $request->status : null;
-        // $search = $request->search ? $request->search : null;
+        $status = $request->status ? $request->status : null;
+        $search = $request->search ? $request->search : null;
         $notes = Investment::all();
-    //     if($search <> null && $request->reset!="Reset"){
-    //         $notes = $notes->where(function($q) use($search){
-    //           $q->Where('amount', 'LIKE', '%' . $search . '%')
-    //           ->orWhere('user_id_fk', 'LIKE', '%' . $search . '%')
-    //           ->orWhere('sdate', 'LIKE', '%' . $search . '%')
-    //           ->orWhere('status', 'LIKE', '%' . $search . '%')
-    //           ->orWhere('transaction_id', 'LIKE', '%' . $search . '%');
-    //         });
 
-    //       }
+        if($search <> null && $request->reset!="Reset"){
+            $notes = $notes->where(function($q) use($search){
+              $q->Where('amount', 'LIKE', '%' . $search . '%')
+              ->orWhere('user_id_fk', 'LIKE', '%' . $search . '%')
+              ->orWhere('sdate', 'LIKE', '%' . $search . '%')
+              ->orWhere('status', 'LIKE', '%' . $search . '%')
+              ->orWhere('transaction_id', 'LIKE', '%' . $search . '%');
+            });
+
+          }
     // $notes = $notes->paginate($limit)
     //     ->appends([
     //         'limit' => $limit
     //     ]);
 
         $this->data['deposit_list'] =  $notes;
-        // $this->data['search'] = $search;
+        $this->data['search'] = $search;
+        $this->data['page'] = 'admin.deposit.pending-deposit';
+        return $this->admin_dashboard();
+    }
+   public function deposit_approve()
+    {
         $this->data['page'] = 'admin.deposit.approved-deposit';
         return $this->admin_dashboard();
     }
