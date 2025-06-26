@@ -28,7 +28,7 @@
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <div class="card b-radius--10">
                     <div class="card-body p-0">
 <div class="table-responsive">
@@ -42,7 +42,6 @@
                                         <th>Created At</th>
 
                                         <th>Transaction ID</th>
-
                                         <th>Status</th>
                                     </tr>
                                 </thead>

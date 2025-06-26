@@ -478,7 +478,7 @@
 
 
                         <li class="sidebar-menu-item ">
-                            <a href="{{route('admin.cron.index')}}" class="nav-link">
+                            <a href="{{route('admin.cron.cron-jobs')}}" class="nav-link">
                                 <i class="menu-icon las la-clock"></i>
                                 <span class="menu-title">Cron Job Setting</span>
                             </a>
