@@ -44,8 +44,9 @@
                     <div class="card-body">
                         <h5 class="card-title mb-4 border-bottom pb-2">Change Password</h5>
 
-                        <form action="http://localhost/p2pexchange/admin/password" method="POST" enctype="multipart/form-data">
-                            <input type="hidden" name="_token" value="IrQnk9Fv9UrISNltFfyg8fBQF94JeiK9knrbB2L0">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <!-- <input type="hidden" name="_token" value="IrQnk9Fv9UrISNltFfyg8fBQF94JeiK9knrbB2L0"> -->
+                             @csrf
                             <div class="form-group">
                                 <label>Password</label>
                                 <input class="form-control" type="password" name="old_password" required>

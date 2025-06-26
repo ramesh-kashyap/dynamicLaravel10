@@ -61,8 +61,12 @@
                                         <td>{{ $value->jdate }}</td>
                                         <td>{{ $value->adate }}</td>
                                         <td>
-                                            {{ $value->active_status == 'Block' ? 'Activation' : 'Renewal' }}
-                                            </td>
+                                            <span class="badge 
+                                          {{ $value->active_status == 'Active' ? 'bg-success' : ($value->active_status == 'Pending' ? 'bg-info' : 'bg-danger') }}">
+                                                {{ $value->active_status }}
+                                            </span>
+                                        </td>
+
                                     </tr>
                                     @empty
                                     <tr>

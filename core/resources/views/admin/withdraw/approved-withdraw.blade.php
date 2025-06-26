@@ -58,9 +58,9 @@
                                         <td>{{ $value->user_id_fk }}</td>
                                         <td>{{ $value->amount }}</td>
                                         <td>{{ $value->created_at }}</td>
-                                        <td>{{ $value->transaction_id }}</td>
-                                        <td>
-                                            {{ $value->user->active_status == 'Approved' ? 'Activation' : 'Renewal' }}
+                                        <td>{{ $value->txn_id }}</td>
+                                        <td><span
+                                                class="badge bg-{{ $value->user->active_status == 'Approved' ? 'success' : 'danger' }}">{{ $value->user->active_status }}</span>
                                         </td>
                                     </tr>
                                     @empty

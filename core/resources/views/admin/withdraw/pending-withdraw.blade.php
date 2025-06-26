@@ -31,7 +31,7 @@
             <div class="col-lg-12">
                 <div class="card b-radius--10">
                     <div class="card-body p-0">
-<div class="table-responsive">
+                      <div class="table-responsive">
                             <table class="table table--light style--two">
                                 <thead>
                                     <tr>
@@ -58,9 +58,9 @@
                                         <td>{{ $value->user_id_fk }}</td>
                                         <td>{{ $value->amount }}</td>
                                         <td>{{ $value->created_at }}</td>
-                                        <td>{{ $value->transaction_id }}</td>
-                                        <td>
-                                            {{ $value->user->active_status == 'Pending' ? 'Activation' : 'Renewal' }}
+                                        <td>{{ $value->txn_id }}</td>
+                                          <td><span
+                                                class="badge bg-{{ $value->user->active_status == 'Pending' ? 'bg-info' : 'danger' }}">{{ $value->user->active_status }}</span>
                                         </td>
                                     </tr>
                                     @empty

@@ -60,9 +60,9 @@
                                         <!-- <td>{{ $value->phone }}</td> -->
                                         <td>{{ $value->jdate }}</td>
                                         <!-- <td>{{ $value->adate }}</td> -->
-                                        <td>
-                                            {{ $value->active_status == 'Block' ? 'Activation' : 'Renewal' }}
-                                            </td>
+                                         <td><span
+                                                class="badge bg-{{ $value->active_status == 'Block' ? 'success' : 'danger' }}">{{ $value->active_status }}</span>
+                                        </td>
                                     </tr>
                                     @empty
                                     <tr>
