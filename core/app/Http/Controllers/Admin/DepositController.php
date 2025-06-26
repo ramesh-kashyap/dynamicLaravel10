@@ -12,10 +12,8 @@ class DepositController extends Controller
 {
     $search = $request->search;
     
-    // Filter only pending and sort by latest
     $notes = Investment::where('status', 'Pending')->orderBy('id', 'DESC');
 
-    // Search filter
     if (!empty($search) && $request->reset != "Reset") {
         $notes = $notes->where(function($q) use($search){
             $q->where('amount', 'LIKE', '%' . $search . '%')
@@ -25,7 +23,6 @@ class DepositController extends Controller
         });
     }
 
-    // Pagination (10 records per page)
     $notes = $notes->paginate(10);
 
     $this->data['deposit_list'] = $notes;
@@ -34,13 +31,46 @@ class DepositController extends Controller
     return $this->admin_dashboard();
 }
 
-   public function deposit_approve()
+   public function deposit_approve(Request $request)
     {
+        $search = $request->search;
+    
+    $notes = Investment::where('status', 'Active')->orderBy('id', 'DESC');
+
+    if (!empty($search) && $request->reset != "Reset") {
+        $notes = $notes->where(function($q) use($search){
+            $q->where('amount', 'LIKE', '%' . $search . '%')
+              ->orWhere('user_id_fk', 'LIKE', '%' . $search . '%')
+              ->orWhere('sdate', 'LIKE', '%' . $search . '%')
+              ->orWhere('transaction_id', 'LIKE', '%' . $search . '%');
+        });
+    }
+
+    $notes = $notes->paginate(10);
+
+    $this->data['deposit_list'] = $notes;
+    $this->data['search'] = $search;
         $this->data['page'] = 'admin.deposit.approved-deposit';
         return $this->admin_dashboard();
     }
-   public function deposit_reject()
+   public function deposit_reject(Request $request)
     {
+
+          $search = $request->search;
+    
+       $notes = Investment::where('status', 'Decline')->orderBy('id', 'DESC');
+
+       if (!empty($search) && $request->reset != "Reset") {
+            $notes = $notes->where(function($q) use($search){
+            $q->where('amount', 'LIKE', '%' . $search . '%')
+              ->orWhere('user_id_fk', 'LIKE', '%' . $search . '%')
+              ->orWhere('sdate', 'LIKE', '%' . $search . '%')
+              ->orWhere('transaction_id', 'LIKE', '%' . $search . '%');
+        });
+    }
+
+       $notes = $notes->paginate(10);
+        $this->data['deposit_list'] = $notes;
         $this->data['page'] = 'admin.deposit.rejected-deposit';
         return $this->admin_dashboard();
     }

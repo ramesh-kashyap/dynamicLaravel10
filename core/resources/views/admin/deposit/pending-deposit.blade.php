@@ -42,43 +42,46 @@
                                         <th>Created At</th>
 
                                         <th>Transaction ID</th>
+
                                         <th>Status</th>
                                     </tr>
                                 </thead>
-                                    <tbody>
-                                                              <?php if(is_array($deposit_list) || is_object($deposit_list)){ ?>
-
-                                                 @foreach($deposit_list as $value)
-                                    <tr>
-                                                      <td>{{$value->user->name}}</td>
-                                                      <td>{{$value->user_id_fk}}</td>
-                                                      <td> {{$value->amount}}</td>
-                                                      <td>{{$value->created_at}}</td>
-                                                      <td>{{$value->transaction_id}}</td>
-                                                      <td>{{($value->user->active_status=="Pending")?"Activation":"Renewal";}}</td>
-
-                                    </tr>
-                                   
-                              
-  @endforeach
-                
-                                             <?php }?>
-                                </tbody>
                                 <tbody>
+                                    @php
+                                        $sr = ($deposit_list->currentPage() - 1) * $deposit_list->perPage() + 1;
+                                    @endphp
+
+                                    @forelse($deposit_list as $value)
+                                    <tr>
+                                        <td>{{ $sr++ }}</td>
+                                        <td>{{ $value->user->name ?? 'N/A' }}</td>
+                                        <td>{{ $value->user_id_fk }}</td>
+                                        <td>{{ $value->amount }}</td>
+                                        <td>{{ $value->created_at }}</td>
+                                        <td>{{ $value->transaction_id }}</td>
+                                        <td>
+                                            {{ $value->user->active_status == 'Pending' ? 'Activation' : 'Renewal' }}
+                                        </td>
+                                    </tr>
+                                    @empty
                                     <tr>
                                         <td class="text-muted text-center" colspan="100%">Data not found</td>
                                     </tr>
+                                    @endforelse
                                 </tbody>
-                            </table><!-- table end -->
+                            </table>
                         </div>
                     </div>
+                </div>
 
-                </div><!-- card end -->
+             <div class="custom-pagination text-center mt-4">
+    {{ $deposit_list->onEachSide(1)->links('pagination::bootstrap-4') }}
+</div>
+
             </div>
         </div>
-
-
-    </div><!-- bodywrapper__inner end -->
-</div><!-- body-wrapper end -->
+    </div>
 </div>
+
+
 @include('layouts.admin.footer')

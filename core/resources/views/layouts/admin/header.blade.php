@@ -493,7 +493,7 @@
                         </li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="../admin/referral" class="nav-link ">
+                            <a href="{{route('admin.referral.referral')}}" class="nav-link ">
                                 <i class="menu-icon las la-sitemap"></i>
                                 <span class="menu-title">Referral Setting</span>
                             </a>
@@ -522,7 +522,7 @@
                 </li>
 
                         <li class="sidebar-menu-item ">
-                            <a href="../admin/seo" class="nav-link">
+                            <a href="{{route('admin.seo')}}" class="nav-link">
                                 <i class="menu-icon las la-globe"></i>
                                 <span class="menu-title">SEO Manager</span>
                             </a>

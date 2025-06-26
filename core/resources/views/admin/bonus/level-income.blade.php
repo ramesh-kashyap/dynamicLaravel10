@@ -10,7 +10,7 @@
     <div class="bodywrapper__inner">
 
         <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
-            <h6 class="page-title">Pending Deposit </h6>
+            <h6 class="page-title">Level Income </h6>
             <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
                 <form action="" method="GET" class="d-flex flex-wrap gap-2">
                     <div class="input-group w-auto flex-fill">
@@ -28,72 +28,61 @@
         </div>
 
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-lg-12">
                 <div class="card b-radius--10">
                     <div class="card-body p-0">
 <div class="table-responsive">
                             <table class="table table--light style--two">
                                 <thead>
                                     <tr>
-                                        <th>S NO.</th>
-                                        <th>User Name</th>
-                                        <th>User Id</th>
-                                        <th>Amount</th>
-                                        <th>Transaction Date.</th>
-
-                                        <th>Transaction ID</th>
-
-                                        <th>Status</th>
+                                 <th>S NO.</th>
+                                                <th>Name</th>
+                                                <th>User ID</th>
+                                                <th>Amount</th>
+                                                <th>Transaction Date.</th>
+                                              
+                                                <th>Level</th>
+                                                <th>From ID</th>
+                                                <th>Remarks</th>
                                     </tr>
                                 </thead>
-                                    <tbody>
-                                    <tr>
-                                         <td>
-                                            1
-                                        </td>
-                                        <td>
-                                            <span>Raj Kashyap</span>
-                                           
-                                        </td>
-                                         <td>
-                                            www101
-                                        </td>
-
-                                        <td>
-                                            100
-                                        </td>
-                                       
-
-                                        <td>
-                                            2024-04-24 11:59 AM <br> 1 year ago
-                                        </td>
-                                         <td>
-                                            <span title="India">ruefjdsf22</span>
-                                        </td>
-                                         <td>
-                                            <span title="India">Pending</span>
-                                        </td>
-
-                                    </tr>
-                                   
-                              
-
-                                </tbody>
                                 <tbody>
+                                    @php
+                                        $sr = ($direct_incomes->currentPage() - 1) * $direct_incomes->perPage() + 1;
+                                    @endphp
+
+                                    @forelse($direct_incomes as $value)
+                                    <tr>
+                                        <td>{{ $sr++ }}</td>
+                                           <td>{{ ($value->user)?$value->user->name:'' }}</td>
+                                                    <td>{{ $value->user_id_fk }}</td>
+                                                 
+                                                    <td>  {{ $value->comm }} </td>
+                                                    <td>{{ $value->created_at }}</td>
+                
+                                                    <td>{{ $value->level }}</td>
+                                                    <td>{{ $value->rname }}</td>
+                                                    <td>{{ $value->remarks }}</td>
+                                    </tr>
+                                    @empty
                                     <tr>
                                         <td class="text-muted text-center" colspan="100%">Data not found</td>
                                     </tr>
+                                    @endforelse
                                 </tbody>
-                            </table><!-- table end -->
+                            </table>
                         </div>
                     </div>
+                </div>
 
-                </div><!-- card end -->
+             <div class="custom-pagination text-center mt-4">
+    {{ $direct_incomes->onEachSide(1)->links('pagination::bootstrap-4') }}
+</div>
+
             </div>
         </div>
-
-
-    </div><!-- bodywrapper__inner end -->
-</div><!-- body-wrapper end -->
+    </div>
 </div>
+
+
 @include('layouts.admin.footer')
